@@ -1,6 +1,11 @@
 /* RESPONSIVIDADE DE TELAS */
 
-
+@media (max-width: 768px) {
+  .hex-tooltip {
+      opacity: 1;
+      pointer-events: auto;
+  }
+}
 
 
 

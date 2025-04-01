@@ -423,9 +423,11 @@ section.pag-start .flex {
 
 .container-favos-projects {
   display: grid;
-  /* gap: 15px; */
-  /* justify-content: center; */
-  /* margin: 2rem auto; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 20px;  */
 }
 
 .pag-projects .projects-linha-1 {
@@ -433,7 +435,7 @@ section.pag-start .flex {
   align-items: center;
   flex-direction: row;
   gap: 5px;
-  margin-left: 284px;
+  /* margin-left: 284px; */
   margin-top: -64px;
 }
 .pag-projects .primeira {
@@ -442,26 +444,152 @@ section.pag-start .flex {
 .pag-projects .projects-linha-2 {
   display: flex;
   align-items: center;
-  margin-left: 142px;
+  /* margin-left: 142px; */
   margin-top: -64px;
   gap: 5px;
   /* Desloca a linha ímpar para a direita e encaixa no centro das pares*/
   flex-direction: row;
 }
 
+/* Especificações Projects */
+.pag-projects .moldura-hexagono {
+  width: 280px;
+  height: 280px;
+  /* background-color: #c38004; */
+  /* background-color: #c38004ac; */
+  background-color: #ebaa32;
+  /* background-color: var(--cor-ctt-primaria); */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  transition: transform 0.4s ease-in-out;
 
+  background: linear-gradient(
+        65deg, /* Ângulo do gradiente */
+        #A25D11 0%,
+        #CE9004 25%,
+        #CCB50F 50%, /* Cor 1 no início */
+        #CE9004 75%, /* Cor 2 no meio */
+        #A25D11 100% /* Cor 3 no final */
+    );
+}
+.pag-projects .moldura-hexagono:hover {
+  transform: scale(1.005);
+  cursor: pointer;
+  background: linear-gradient(
+        95deg, /* Ângulo do gradiente */
+        #A25D11 0%,
+        #CE9004 25%,
+        #CCB50F 50%, /* Cor 1 no início */
+        #CE9004 75%, /* Cor 2 no meio */
+        #A25D11 100% /* Cor 3 no final */
+    );
+}
+
+/* ****************** */
+
+
+
+
+/* *************************************** */
+/** TOOLTIP - CAIXA DE TEXTO DOS PROJETOS */
+/* *************************************** */
+/* Container principal - ajuste conforme sua estrutura atual */
+/* Estilo dos tooltips hexagonais */
+.hex-tooltip {
+  position: absolute;
+  width: 250px; /* Largura do tooltip */
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+/* .hex-tooltip.left {
+  right: 100%;
+  margin-right: 15px;
+} */
+.hex-tooltip.left-favo-1,
+.hex-tooltip.left-favo-2,
+.hex-tooltip.left-favo-4,
+.hex-tooltip.left-favo-5,
+.hex-tooltip.left-favo-7,
+.hex-tooltip.left-favo-8 {
+  right: 100%;
+  margin-right: 25px;
+}
+/* .hex-tooltip.right {
+  left: 100%;
+  margin-left: 15px;
+} */
+.hex-tooltip.right-favo-3,
+.hex-tooltip.right-favo-6,
+.hex-tooltip.right-favo-9 {
+  left: 100%;
+  margin-left: 25px;
+}
+/* Efeito de hexágono com borda esfumaçada */
+.hex-tooltip-content {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+/* Botões */
+.hex-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+.hex-btn {
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+}
+.hex-btn.github {
+  background-color: #333;
+  color: white;
+}
+.hex-btn.deploy {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Mostrar tooltip ao passar o mouse no hexágono correspondente */
+#favo-projects-01:hover ~ .hex-tooltip.left-favo-1,
+#favo-projects-02:hover ~ .hex-tooltip.left-favo-2,
+#favo-projects-04:hover ~ .hex-tooltip.left-favo-4,
+#favo-projects-05:hover ~ .hex-tooltip.left-favo-5,
+#favo-projects-07:hover ~ .hex-tooltip.left-favo-7,
+#favo-projects-08:hover ~ .hex-tooltip.left-favo-8,
+#favo-projects-03:hover ~ .hex-tooltip.right-favo-3,
+#favo-projects-06:hover ~ .hex-tooltip.right-favo-6,
+#favo-projects-09:hover ~ .hex-tooltip.right-favo-9 {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 
 /* *************************************** */
 /**  */
+/* !TESTE ERRADO AINDA*/
 /* *************************************** */
-
-
-
-/* *************************************** */
-/**  */
-/* *************************************** */
-
+.hex-tooltip.left {
+  transform: translateX(-20px);
+}
+.hex-tooltip.right {
+  transform: translateX(20px);
+}
+#favo-projects-02:hover ~ .hex-tooltip.left,
+#favo-projects-03:hover ~ .hex-tooltip.right {
+  transform: translateX(0);
+}
 
 
 /* *************************************** */
