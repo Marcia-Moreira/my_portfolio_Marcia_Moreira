@@ -1,0 +1,43 @@
+/* ROOT DE CORES DO PROJETO: */
+
+
+/* *************************************** */
+/** ROOT de CORES: */
+/* *************************************** */
+:root {
+    /* DARK */
+    /* BackGround: */
+    --cor-bg-primaria: #000;
+    --cor-bg-secundaria: #0f0;
+    --cor-bg-terciaria: #00f;
+    /* Texto: */
+    --cor-txt-primaria: #f1f1f1;
+    --cor-txt-secundaria: #000;
+    --cor-txt-terciaria: #a9a7a7;
+    /* #c9c5c5 */
+
+    /* Contraste: */
+    --cor-ctt-primaria: rgb(248, 163, 87);
+    --cor-ctt-primaria: #ffd700;
+    --cor-ctt-primaria: #daa520;
+    --cor-ctt-primaria: #b8860b;
+    --cor-ctt-primaria: #b29146;
+    /* Levemente Mais Clara/Acesa: */
+    --cor-ctt-secundaria: rgb(253, 175, 106);
+    --cor-ctt-secundaria: #fcdb22;
+    --cor-ctt-secundaria: #efb523;
+    --cor-ctt-secundaria: #cb950d;
+    --cor-ctt-secundaria: #c9a550;
+
+    --cor-ctt-terciaria: #00f;
+    /* Btn: */
+    /* LIGTH: */
+    --cor1: #9d1616;
+    --cor2: #301a88;
+    --cor3: #1e9f3a;
+
+    /* fUNCIONA */
+    --exag-border: #CCAC0C;
+    --exag-bg_color: #CE9004;
+}
+

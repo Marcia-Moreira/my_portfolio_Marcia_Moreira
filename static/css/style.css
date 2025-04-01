@@ -1,0 +1,711 @@
+/* CSS Central */
+
+/* *************************************** */
+/** RESET: */
+/* *************************************** */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Retira o sublinhado das palavras link: */
+    text-decoration: none;
+    list-style-type: none;
+}
+/* *************************************** */
+/** ROOT de CORES ESPECÍFICAS DE FAVOS: */
+/* *************************************** */
+:root {
+/* CORES DE REFERÊNCIA ESTILIZAÇÃO DOS FAVOS: */
+--color_01: #CE8604;
+--color_02: #CE9004;
+--color_03: #CE9C0A;
+--color_04: #CEA216;
+--color_05: #CEA61D;
+--color_06: #CCAC0C;
+--color_07: #CCB50F;
+--color_08: #CEC3A7;
+--color_09: #863607;
+--color_10: #833403;
+--color_11: #7C3A0C;
+--color_12: #A25D11;
+--color_13: #BC7B2E;
+
+/* CORES DOS EXAGONOS: NÃO FUNCIONA! */
+--exag-0e100perc: #A25D11;
+--exag-25e75perc: #CE9004;
+--exag-50perc: #CCB50F;
+}
+
+/* *************************************** */
+/** ESTILO DE FONTES: */
+/* *************************************** */
+/*! Poppins */
+/*! Procurar a fonte fininha: */
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Krona+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+html {
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Montserrat', sans-serif; */
+  /* font-family: 'Josefin Slab', serif; */
+  /* font-family: 'Lora', serif; */
+  /* font-family: 'Fahkwang', sans-serif; */
+  font-family: 'Krona One', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
+  /* font-family: 'Playfair Display', serif; */
+  /* font-family: 'Roboto Slab', serif; */
+  height: 100vh;
+  /* overflow: hidden; */
+}
+/* *************************************** */
+/** ESTILO GERAL DE PÁGINAS: */
+/* *************************************** */
+body {
+  background-color: var(--cor-bg-primaria);
+  color: var(--cor-txt-primaria);
+}
+/* *************************************** */
+/** ESTILO DAS PAGINAS: */
+/* *************************************** */
+section.pag-about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+section.pag-skills {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+section.pag-projects {
+  min-height: 100vh;
+  /*! Rever como colocar final da página apenas depois do ultimo hexagono */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* Espaçamento Borda Lateral: */
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+}
+.btns-contato {
+  display: flex;
+  gap: 10%;
+}
+.btn-contato button {
+  color: var(--cor-txt-secundaria);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+  /* BTN Formato Favo */
+  width: 150px;
+  height: 50px;
+  background-color: var(--cor-ctt-primaria);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px inset var(--exag-bg_color);
+  /* Efeito de profundidade com borda esfumaçada */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+} 
+.btn-contato button:hover {
+  box-shadow: 0px 0px 8px var(--cor-ctt-secundaria);
+  transform: scale(1.01);
+  color: var(--cor-txt-primaria);
+}
+.section-skills .bloco-central {
+  justify-content: space-between; 
+  padding: 2rem 0; /* espaçamento vertical */
+  flex-direction: column;
+}
+.section-skills .favo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centraliza verticalmente */
+  align-items: center; /* centraliza horizontalmente */
+  margin: 0 auto; /* centraliza horizontalmente */
+}
+.bloco-central-titulo,
+.bloco-central-texto {
+  flex-direction: column;
+  padding: 0 1rem 1rem 1rem;
+}
+.bloco-central-titulo h1,
+.bloco-central-texto p {
+  text-align: center;
+  /* margin-bottom: 1rem; */
+  width: 100%;
+}
+.bloco-central-img {
+  flex: 1; /* ocupa o espaço central */
+  width: 100%;
+  /* max-width: 800px; */
+  margin: 0 auto; /* centraliza horizontalmente */
+  /* padding: 1rem; */
+  justify-content: center;
+}
+/* Se as imagens ainda estiverem à esquerda dentro do bloco: */
+.bloco-central-img .img-favoColmeia {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+/* *************************************** */
+/** ESTILO DO CABEÇALHO: */
+/* *************************************** */
+header {
+  padding: 1% 4%;
+}
+header > .interface {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header a {
+  color: var(--cor-txt-terciaria);
+  /* Para ter efeito Hover Scale: */
+  display: inline-block;
+  transition: 0.2s;
+}
+header a:hover {
+  color: var(--cor-txt-primaria);
+  transform: scale(1.01);
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  display: inline-block;
+  padding: 0 15%;
+}
+/* *************************************** */
+/** ESTILIZAÇÃO DOS MOVIMENTOS BIBLIOTECA SCROLLREVEAL:  */
+/* *************************************** */
+/* https://youtu.be/dN7FAswF2HQ?si=cTT26-Zm98NU9hHH */
+.reveal-fade,
+.reveal-left,
+.delay-100,
+.delay-200,
+.delay-300,
+.delay-400,
+.delay-500,
+.delay-600 {
+    /* Esconder a propriedade */
+    visibility: hidden;
+}
+/* *************************************** */
+/** ESTILO DO TOPO DO SITE - START: */
+/* *************************************** */
+section.pag-start {
+  padding: 3%;
+}
+section.pag-start .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+.pag-start .txt-pag-start h1 {
+  font-size: 32px;
+  line-height: 40px;
+}
+.pag-start .txt-pag-start h1 span {
+  color: var(--cor-ctt-primaria);
+  /*! REVER se ficararA Sobreposto */
+  font-size: 48px;
+  transition: 0.2s;
+}
+.pag-start .txt-pag-start h1 span:hover {
+  color: var(--cor-ctt-secundaria);
+  cursor: pointer;
+}
+.pag-start .txt-pag-start p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 34px;
+  color: var(--cor-txt-terciaria);
+  margin: 4% 0;
+  font-weight: 400;
+}
+.img-pag-start img {
+  /* width: 100%; */
+  width: 200px;
+  max-width: 300px;
+  height: auto;
+  border-radius: 20px 0 20px 0;
+}
+/* Efeito Flutuação da Imagem: */
+.pag-start .img-pag-start img {
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+}
+@keyframes flutuar {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
+  }
+}
+/* **************************************** */
+/** MOLDURA DA FOTO DE PERFIL:*/
+/* **************************************** */
+/* Tentativa Moldura Exagonal: */
+.moldura-hexagono {
+  width: 280px;
+  height: 280px;
+  background-color: #c38004;
+  /* background-color: var(--cor-ctt-primaria); */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  transition: transform 0.2s ease-in-out;
+}
+.moldura-hexagono:hover {
+  transform: scale(1.005);
+  cursor: pointer;
+  background: linear-gradient(
+        65deg, /* Ângulo do gradiente */
+        #A25D11 0%,
+        #CE9004 25%,
+        #CCB50F 50%, /* Cor 1 no início */
+        #CE9004 75%, /* Cor 2 no meio */
+        #A25D11 100% /* Cor 3 no final */
+    );
+}
+.moldura-hexagono-profundo {
+  width: 260px;
+  height: 260px;
+  /* background-color: #CE9004; */
+  background-color: var(--cor-ctt-primaria);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px inset #CCAC0C;
+  /* Efeito de profundidade com borda esfumaçada */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+}
+.moldura-hexagono-profundo:hover {
+  transform: scale(1.005);
+  cursor: pointer;
+  background: linear-gradient(
+        65deg, /* Ângulo do gradiente */
+        #A25D11 0%,
+        #CE9004 25%,
+        #CCB50F 50%, /* Cor 1 no início */
+        #CE9004 75%, /* Cor 2 no meio */
+        #A25D11 100% /* Cor 3 no final */
+    );
+}
+
+/* *************************************** */
+/**  */
+/* *************************************** */
+#skills {
+  /* border: 1px solid #0f0; */
+}
+#projects {
+  /* border: 1px solid #00f; */
+}
+#about {
+  /* border: 1px solid #f00; */
+}
+#centralMedio,
+#centralGrande {
+  /* justify-content: center; */
+  color: #9d1616;
+}
+
+/* *************************************** */
+/** PÁGINA PROJECTS: */
+/* *************************************** */
+
+/* TESTE */
+/*? ERRO - Não consegui fazer funcionar o codigo grid com molduras */
+
+/* ESTRUTURA BASE */
+/* OK .container-favos-projects */
+/*! Tamanho Original Grande 280px */
+  /* width: 280px; */
+  /* height: 280px; */
+/* .projects-colmeia-hexagonal {  
+  display: grid;
+  gap: 15px;
+  justify-content: center;
+  margin: 2rem auto;
+  flex-direction: column;
+} */
+
+/* ESTILOS DOS HEXÁGONOS */
+/* Proporção hexagonal (width * 1.1547) */
+/* Proporção hexagonal (width * 1.1547) */
+/* .projects-moldura-hexagono-profundo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9d1616;
+} */
+/* Efeito Scroll em Projects: */
+/* .projects-moldura-hexagono {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+} */
+/* .projects-moldura-hexagono.reveal {
+  opacity: 1;
+  transform: translateY(0);
+} */
+/* Efeito Scroll em Projects: */
+/*! REVER: ok nome*/
+/* .linha-colmeia:nth-child(even) {
+  margin-left: 50px;
+  background-color: #9d1616;
+} */
+
+/* Adicione APENAS isto ao seu CSS existente */
+/* .projects-colmeia-hexagonal {
+  display: grid;
+  gap: 15px;
+  justify-content: center;
+} */
+
+/* .projects-moldura-hexagono {
+  width: 100px;
+  height: 115px;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+} */
+
+/* @media (max-width: 768px) {
+  .projects-colmeia-hexagonal {
+      grid-template-columns: repeat(2, 1fr);
+  }
+} */
+/* Verificar quando apagar os codigos acima */
+/* *************************************** */
+
+/* TESTE */
+#favo-projects-01,
+#favo-projects-02,
+#favo-projects-03,
+#favo-projects-04,
+#favo-projects-05,
+#favo-projects-06,
+#favo-projects-07 {
+  /* Para esconder os favos: */
+  /* display: none; */
+  /* visibility: hidden; */
+}
+
+#favo-projects-01 {
+
+}
+
+
+/*! tESTE */
+
+.container-favos-projects {
+  display: grid;
+  /* gap: 15px; */
+  /* justify-content: center; */
+  /* margin: 2rem auto; */
+}
+
+.pag-projects .projects-linha-1 {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+  margin-left: 284px;
+  margin-top: -64px;
+}
+.pag-projects .primeira {
+  margin-top: 80px;
+}
+.pag-projects .projects-linha-2 {
+  display: flex;
+  align-items: center;
+  margin-left: 142px;
+  margin-top: -64px;
+  gap: 5px;
+  /* Desloca a linha ímpar para a direita e encaixa no centro das pares*/
+  flex-direction: row;
+}
+
+
+
+
+/* *************************************** */
+/**  */
+/* *************************************** */
+
+
+
+/* *************************************** */
+/**  */
+/* *************************************** */
+
+
+
+/* *************************************** */
+/** ESTILIZAÇÃO FAVOS - COLMEIAS: */
+/* *************************************** */
+
+.favo img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+.favo img:hover {
+  transform: scale(1.01);
+}
+.favo img.badges {
+  width: 35px;
+}
+.favo a.icons,
+.favo img.icons {
+  width: 20px;
+  text-decoration: none;
+}
+/* *************************************** */
+/** ESTILIZAÇÃO PLANO DE FUNDO FAVOS COLMEIA:  */
+/* *************************************** */
+.bg-colmeia {
+  height: 100vh;
+}
+.section-start {
+  margin: 0;
+  padding: 0;
+}
+.bg-colmeia #cantoInferiorEsquerdo {
+  /* Para Posicionar na Tela da Página: */
+  margin-left: -0.5%;
+  /* margin-bottom: -1%; */
+}
+.bg-colmeia #centralGrande {
+  /* Para Posicionar na Tela da Página: */
+  /* margin-left: -0.5%; */
+  /* margin-bottom: -1%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* *************************************** */
+/** ESTILIZAÇÃO da COLMEIA e FAVOS: */
+/* *************************************** */
+/* Referências visuais de Colmeias: */
+/* https://www.gettyimages.pt/fotos/colmeia */
+/*! Teste */
+.img-favoColmeia {
+  /* background-color: #fff; */
+}
+/* Bloco de Colmeia: */
+.colmeia {
+  display: flex;
+  flex-direction: column;
+  /* position: absolute; */
+  display: flow-root; /* Contém elementos flutuantes */
+}
+.linha-par,
+.linha-impar.linha-pequena,
+.linha-impar.linha-media,
+.linha-impar.linha-grande {
+  display: flex;
+}
+.linha-impar.linha-pequena {
+  margin-left: 22px;
+  /* Desloca a linha ímpar para a direita e encaixa no centro das pares*/
+}
+.linha-impar.linha-media {
+  margin-left: 32px; 
+  /* Desloca a linha ímpar para a direita e encaixa no centro das pares*/
+}
+.linha-impar.linha-grande {
+  margin-left: 42px; 
+  /* Desloca a linha ímpar para a direita e encaixa no centro das pares*/
+}
+/* Parte Superior: */
+.hexagono {
+  background-color: #c38004;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+  /* Para colar as linhas da colmeia! */
+  margin-right: 3px;
+  margin-bottom: 3px;
+  border-radius: 12px;
+  /* Efeito base - favos inicialmente invisíveis */
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.hexagono.pequeno {
+  width: 40px;
+  height: 40px;
+  margin-top: -10px;
+}
+.hexagono.medio {
+  width: 60px;
+  height: 60px;
+  margin-top: -14px;
+}
+.hexagono.grande {
+  width: 80px;
+  height: 80px;
+  margin-top: -18px;
+}
+.hexagono:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  background: linear-gradient(
+        65deg, /* Ângulo do gradiente */
+        #A25D11 0%,
+        #CE9004 25%,
+        #CCB50F 50%, /* Cor 1 no início */
+        #CE9004 75%, /* Cor 2 no meio */
+        #A25D11 100% /* Cor 3 no final */
+    );
+}
+.hexagono-profundo {
+  /* *TAMANHO EXAGONO: */
+  background-color: #CE9004;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px inset #CCAC0C;
+  /* Efeito de profundidade com borda esfumaçada */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+.hexagono-profundo.pequeno-profundo {
+  width: 30px;
+  height: 30px;
+}
+.hexagono-profundo.medio-profundo {
+  width: 50px;
+  height: 50px;
+}
+.hexagono-profundo.grande-profundo {
+  width: 70px;
+  height: 70px;
+}
+.hexagono-profundo.transparente {
+  border: transparent;
+  background-color: transparent;
+}
+.hexagono-profundo:hover {
+  background-color: transparent;
+  box-shadow: transparent;
+  border: transparent;
+
+  border: 1px inset #CCAC0C;
+  /* Efeito de profundidade com borda esfumaçada */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+/* Para Usar no hexagono Transparente: */
+.transparente {
+  background: transparent;
+  background-color: transparent;
+  color: transparent;
+  cursor: default;
+}
+.transparente:hover {
+  background: transparent;
+  background-color: transparent;
+  color: transparent;
+  transform: none;
+  box-shadow: none;
+  cursor: default;
+  border: transparent;
+}
+
+/* *************************************** */
+/** Efeito Piscar Favos com Degradê: */
+/* *************************************** */
+@keyframes pulseColor {
+  0% { 
+    background: linear-gradient(
+      65deg,
+      #A25D11 0%,
+      #CE9004 25%,
+      #CCB50F 50%,
+      #CE9004 75%,
+      #A25D11 100%
+    );
+    opacity: 0.6;
+  }
+  25% { 
+    background: linear-gradient(
+      65deg,
+      #A25D11 0%,
+      #CE9004 25%,
+      #CCB50F 50%,
+      #CE9004 75%,
+      #A25D11 100%
+    );
+    opacity: 0.8;
+  }
+  50% { 
+    background: linear-gradient(
+      65deg,
+      #CCB50F 0%,
+      #A25D11 25%,
+      #CE9004 50%,
+      #A25D11 75%,
+      #CCB50F 100%
+    );
+    opacity: 1;
+  }
+  75% { 
+    background: linear-gradient(
+      65deg,
+      #A25D11 0%,
+      #CE9004 25%,
+      #CCB50F 50%,
+      #CE9004 75%,
+      #A25D11 100%
+    );
+    opacity: 0.8;
+  }
+  100% { 
+    background: linear-gradient(
+      65deg,
+      #A25D11 0%,
+      #CE9004 25%,
+      #CCB50F 50%,
+      #CE9004 75%,
+      #A25D11 100%
+    );
+    opacity: 0.6;
+  }
+}
+.hexagono.piscando {
+  animation: pulseColor 2s ease-in-out 2;
+  background-size: 250% 250%; /* Valor ideal para esse caso */
+  background-position: center; 
+  /* Importante para manter o foco */
+}
+/* *************************************** */
+/* *************************************** */

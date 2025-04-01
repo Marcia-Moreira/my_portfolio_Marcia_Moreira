@@ -1,0 +1,47 @@
+/* RESPONSIVIDADE DE TELAS */
+
+
+
+
+
+
+/* REVER SE GRID FAZ SENTIDO */
+
+/* Padrão para mobile primeiro (2-1-2) */
+.projects-colmeia-hexagonal {
+    grid-template-columns: repeat(2, 1fr);
+}
+/* Telas médias (3-2-3) */
+@media (min-width: 768px) {
+    .projects-colmeia-hexagonal {
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
+/* Telas grandes (4-3-4) */
+@media (min-width: 1200px) {
+    .projects-colmeia-hexagonal {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Rever se está repetido: */
+/* Responsividade de Tela: */
+/* Padrão para mobile primeiro (2-1-2) */
+/* .container-favos-projects, */
+.projects-colmeia-hexagonal {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  /* Telas médias (3-2-3) */
+  @media (min-width: 768px) {
+    /* .container-favos-projects, */
+    .projects-colmeia-hexagonal {
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  /* Telas grandes (4-3-4) */
+  @media (min-width: 1200px) {
+    /* .container-favos-projects, */
+    .projects-colmeia-hexagonal {
+        grid-template-columns: repeat(4, 1fr);
+    }
+  }
