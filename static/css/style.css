@@ -205,7 +205,7 @@ header nav ul li {
     visibility: hidden;
 }
 /* *************************************** */
-/** ESTILO DO TOPO DO SITE - START: */
+/** ESTILO PÁGINA - START: */
 /* *************************************** */
 section.pag-start {
   padding: 3%;
@@ -264,14 +264,22 @@ section.pag-start .flex {
 .moldura-hexagono {
   width: 280px;
   height: 280px;
-  background-color: #c38004;
+  /* background-color: #c38004; */
   /* background-color: var(--cor-ctt-primaria); */
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 12px;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  background: linear-gradient(
+      65deg,
+      #A25D11 0%,
+      #CE9004 25%,
+      #CCB50F 50%,
+      #CE9004 75%,
+      #A25D11 100%
+    );
 }
 .moldura-hexagono:hover {
   transform: scale(1.005);
@@ -286,19 +294,19 @@ section.pag-start .flex {
     );
 }
 .moldura-hexagono-profundo {
-  width: 260px;
-  height: 260px;
-  /* background-color: #CE9004; */
-  background-color: var(--cor-ctt-primaria);
+  width: 270px;
+  height: 270px;
+  /* background-color: var(--cor-ctt-primaria); */
+  background-color: var(--cor-bg-primaria);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 12px;
-  border: 1px inset #CCAC0C;
+  /*! PERGUNTAR SE DEIXA OU TIRA ESSA BORDA!!! */
+  border-radius: 92px;
   /* Efeito de profundidade com borda esfumaçada */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 .moldura-hexagono-profundo:hover {
   transform: scale(1.005);
@@ -334,102 +342,13 @@ section.pag-start .flex {
 /* *************************************** */
 /** PÁGINA PROJECTS: */
 /* *************************************** */
-
-/* TESTE */
-/*? ERRO - Não consegui fazer funcionar o codigo grid com molduras */
-
-/* ESTRUTURA BASE */
-/* OK .container-favos-projects */
-/*! Tamanho Original Grande 280px */
-  /* width: 280px; */
-  /* height: 280px; */
-/* .projects-colmeia-hexagonal {  
-  display: grid;
-  gap: 15px;
-  justify-content: center;
-  margin: 2rem auto;
-  flex-direction: column;
-} */
-
-/* ESTILOS DOS HEXÁGONOS */
-/* Proporção hexagonal (width * 1.1547) */
-/* Proporção hexagonal (width * 1.1547) */
-/* .projects-moldura-hexagono-profundo {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #9d1616;
-} */
-/* Efeito Scroll em Projects: */
-/* .projects-moldura-hexagono {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.5s ease;
-} */
-/* .projects-moldura-hexagono.reveal {
-  opacity: 1;
-  transform: translateY(0);
-} */
-/* Efeito Scroll em Projects: */
-/*! REVER: ok nome*/
-/* .linha-colmeia:nth-child(even) {
-  margin-left: 50px;
-  background-color: #9d1616;
-} */
-
-/* Adicione APENAS isto ao seu CSS existente */
-/* .projects-colmeia-hexagonal {
-  display: grid;
-  gap: 15px;
-  justify-content: center;
-} */
-
-/* .projects-moldura-hexagono {
-  width: 100px;
-  height: 115px;
-  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-} */
-
-/* @media (max-width: 768px) {
-  .projects-colmeia-hexagonal {
-      grid-template-columns: repeat(2, 1fr);
-  }
-} */
-/* Verificar quando apagar os codigos acima */
-/* *************************************** */
-
-/* TESTE */
-#favo-projects-01,
-#favo-projects-02,
-#favo-projects-03,
-#favo-projects-04,
-#favo-projects-05,
-#favo-projects-06,
-#favo-projects-07 {
-  /* Para esconder os favos: */
-  /* display: none; */
-  /* visibility: hidden; */
-}
-
-#favo-projects-01 {
-
-}
-
-
-/*! tESTE */
-
 .container-favos-projects {
   display: grid;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* gap: 20px;  */
 }
-
 .pag-projects .projects-linha-1 {
   display: flex;
   align-items: center;
@@ -450,14 +369,10 @@ section.pag-start .flex {
   /* Desloca a linha ímpar para a direita e encaixa no centro das pares*/
   flex-direction: row;
 }
-
 /* Especificações Projects */
 .pag-projects .moldura-hexagono {
   width: 280px;
   height: 280px;
-  /* background-color: #c38004; */
-  /* background-color: #c38004ac; */
-  background-color: #ebaa32;
   /* background-color: var(--cor-ctt-primaria); */
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   display: flex;
@@ -488,106 +403,222 @@ section.pag-start .flex {
     );
 }
 
-/* ****************** */
-
-
-
-
 /* *************************************** */
 /** TOOLTIP - CAIXA DE TEXTO DOS PROJETOS */
 /* *************************************** */
 /* Container principal - ajuste conforme sua estrutura atual */
 /* Estilo dos tooltips hexagonais */
+
+/* Container principal do tooltip - hexágono externo */
 .hex-tooltip {
   position: absolute;
-  width: 250px; /* Largura do tooltip */
+  width: 280px;
+  height: 280px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: linear-gradient(
+      65deg,
+      #A25D11 0%,
+      #CE9004 25%,
+      #CCB50F 50%,
+      #CE9004 75%,
+      #A25D11 100%
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
   opacity: 0;
-  transition: all 0.3s ease;
-  pointer-events: none;
-  z-index: 10;
+  /* Aumentei a Transição para ajudar a transição do Mouse até os botões do ToolTip: */
+  transition: all 1.10s ease-in-out;
 }
-/* .hex-tooltip.left {
-  right: 100%;
-  margin-right: 15px;
-} */
-.hex-tooltip.left-favo-1,
-.hex-tooltip.left-favo-2,
-.hex-tooltip.left-favo-4,
-.hex-tooltip.left-favo-5,
-.hex-tooltip.left-favo-7,
-.hex-tooltip.left-favo-8 {
-  right: 100%;
-  margin-right: 25px;
-}
-/* .hex-tooltip.right {
-  left: 100%;
-  margin-left: 15px;
-} */
-.hex-tooltip.right-favo-3,
-.hex-tooltip.right-favo-6,
-.hex-tooltip.right-favo-9 {
-  left: 100%;
-  margin-left: 25px;
-}
+/* Hexágono interno - 10px menor para criar o efeito de borda */
 /* Efeito de hexágono com borda esfumaçada */
 .hex-tooltip-content {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(5px);
-  border-radius: 10px;
+  width: 270px;
+  height: 270px;
+  background-color: var(--cor-bg-primaria);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  /*! PERGUNTAR SE DEIXA OU TIRA ESSA BORDA!!! */
+  border-radius: 92px;
+  /* Centralização do Conteúdo: */
+  /* width: 100%; */
+  /* height: 100%; */
+  text-align: center;
+  color: var(--cor-txt-primaria);
+  /* Aumentei a Transição para ajudar a transição do Mouse até os botões do ToolTip: */
+  transition: all 1.10s ease-in-out;
+}
+.hex-tooltip.left-favo-2,
+.hex-tooltip.left-favo-5,
+.hex-tooltip.left-favo-8 {
+  right: 100%;
+  margin-right: 5px;
+}
+.hex-tooltip.right-favo-3,
+.hex-tooltip.right-favo-6,
+.hex-tooltip.right-favo-7,
+.hex-tooltip.right-favo-9 {
+  left: 100%;
+  margin-left: 5px;
+}
+.hex-tooltip.right-favo-1,
+.hex-tooltip.right-favo-4,
+.hex-tooltip.right-favo-7 {
+  left: 100%;
+  margin-left: -135px;
+  /* margin-top: 70px; */
+  /* margin-bottom: -50px; */
+}
+/* Estilos do texto */
+.hex-tooltip-content h3 {
+  margin-bottom: 10px;
+}
+.hex-tooltip-content p {
+  margin-bottom: 15px;
+  font-size: 0.7em;
+  line-height: 1.4;
 }
 /* Botões */
 .hex-buttons {
   display: flex;
   gap: 10px;
   margin-top: 15px;
+  justify-content: center;
 }
 .hex-btn {
   padding: 8px 15px;
   border-radius: 5px;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 0.9em;
+  font-size: 0.7em;
+  letter-spacing: 3px;
   transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .hex-btn.github {
-  background-color: #333;
-  color: white;
+  background: linear-gradient(
+      65deg,
+      #A25D11 0%,
+      #CE9004 25%,
+      #CCB50F 50%,
+      #CE9004 75%,
+      #A25D11 100%
+    );
+    color: var(--cor-txt-primaria);
 }
 .hex-btn.deploy {
-  background-color: #4CAF50;
-  color: white;
+  background: linear-gradient(
+      65deg,
+      #A25D11 0%,
+      #CE9004 25%,
+      #CCB50F 50%,
+      #CE9004 75%,
+      #A25D11 100%
+    );
+  color: var(--cor-txt-primaria);
 }
-
+.hex-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 /* Mostrar tooltip ao passar o mouse no hexágono correspondente */
-#favo-projects-01:hover ~ .hex-tooltip.left-favo-1,
+#favo-projects-01:hover ~ .hex-tooltip.right-favo-1,
 #favo-projects-02:hover ~ .hex-tooltip.left-favo-2,
-#favo-projects-04:hover ~ .hex-tooltip.left-favo-4,
-#favo-projects-05:hover ~ .hex-tooltip.left-favo-5,
-#favo-projects-07:hover ~ .hex-tooltip.left-favo-7,
-#favo-projects-08:hover ~ .hex-tooltip.left-favo-8,
 #favo-projects-03:hover ~ .hex-tooltip.right-favo-3,
+#favo-projects-04:hover ~ .hex-tooltip.right-favo-4,
+#favo-projects-05:hover ~ .hex-tooltip.left-favo-5,
 #favo-projects-06:hover ~ .hex-tooltip.right-favo-6,
+#favo-projects-07:hover ~ .hex-tooltip.right-favo-7,
+#favo-projects-08:hover ~ .hex-tooltip.left-favo-8,
 #favo-projects-09:hover ~ .hex-tooltip.right-favo-9 {
   opacity: 1;
   pointer-events: auto;
 }
+/** INÍCIO - ÁREA DE CLICK */
+/* Para Aumentar a Área de Click do Exagono para o ToolTip: */
+/* Adicione uma área invisível de conexão entre o hexágono e o tooltip */
+/* OPÇÃO 01: Solução com CSS Puro (Gap Filler)*/
+.hex-tooltip::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+}
+/* Posicionamento diferente para tooltips à esquerda e direita */
+.hex-tooltip.left::before {
+  right: -10px;
+  top: 50%;
+}
+.hex-tooltip.right::before {
+  left: -10px;
+  top: 50%;
+}
+/* OPÇÃO 02: Solução Híbrida (CSS + Pequeno Delay) */
+/* Aumenta o tempo de fade out para dar chance de o mouse chegar */
+.hex-tooltip {
+  transition: opacity 0.5s ease, transform 0.3s ease;
+}
+/* Cria uma área de "ponte" entre os elementos */
+#favo-projects-03:hover ~ .hex-tooltip,
+.hex-tooltip:hover {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+/* OPÇÃO 03: ARQUIVO JS */
 
+/* OPÇÃO 04: Solução com Pseudo-elemento de Conexão (Para Layouts Fixos) */
+/* Cria uma "ponte" invisível entre os elementos */
+#favo-projects-01::after,
+#favo-projects-02::after,
+#favo-projects-03::after
+#favo-projects-04::after
+#favo-projects-05::after
+#favo-projects-06::after
+#favo-projects-07::after
+#favo-projects-08::after
+#favo-projects-09::after {
+  content: '';
+  position: absolute;
+  width: 30px;  /* Largura da ponte */
+  height: 10px; /* Altura da ponte */
+  background: transparent;
+  right: -30px; /* Posiciona a ponte */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 101;
+}
+/* OPÇÃO 05: CSS adicional: */
+.hex-tooltip {
+  /* Mantenha seus estilos atuais */
+  pointer-events: none; /* Inicialmente desativado */
+}
+.hexagon-tooltip-group:hover .hex-tooltip {
+  opacity: 1;
+  pointer-events: auto; /* Ativa interação quando o grupo está em hover */
+}
+/** FIM - ÁREA DE CLICK */
 
 /* *************************************** */
 /**  */
 /* !TESTE ERRADO AINDA*/
 /* *************************************** */
+.hex-tooltip.left-favo-8,
 .hex-tooltip.left {
   transform: translateX(-20px);
 }
+.hex-tooltip.right-favo-9,
 .hex-tooltip.right {
   transform: translateX(20px);
 }
-#favo-projects-02:hover ~ .hex-tooltip.left,
-#favo-projects-03:hover ~ .hex-tooltip.right {
+#favo-projects-08:hover ~ .hex-tooltip.left-favo-8,
+#favo-projects-09:hover ~ .hex-tooltip.right-favo-9 {
   transform: translateX(0);
 }
 
@@ -623,9 +654,24 @@ section.pag-start .flex {
   margin: 0;
   padding: 0;
 }
+/*! REVER ESSE TRECHO PARA POSICIONAR os favos */
+.bg-colmeia .position-favos {
+  position: absolute;
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  justify-content: space-around;
+  /* Para Posicionar na Tela da Página: */
+}
 .bg-colmeia #cantoInferiorEsquerdo {
   /* Para Posicionar na Tela da Página: */
   margin-left: -0.5%;
+  /* margin-bottom: -1%; */
+}
+.bg-colmeia #cantoInferiorDireito {
+  /* Para Posicionar na Tela da Página: */
+  margin-right: -5%;
   /* margin-bottom: -1%; */
 }
 .bg-colmeia #centralGrande {

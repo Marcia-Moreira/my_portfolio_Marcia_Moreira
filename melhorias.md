@@ -5,3 +5,4 @@
 - teste
             <!--! Verificar onde deixamos a Classe de Movimento dos Favos!!! se no Index ou no favos html-->
             <!--! Montar código que faz surgir randomicamente cada favo em um tempo diferente! -->
+- Verificar o JS da área de click do tooltips x exagono principal, parece não funcionar pois deu erro ao colocra a classe de grupo de tooltips no html

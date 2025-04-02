@@ -6,9 +6,17 @@
       pointer-events: auto;
   }
 }
-
-
-
+/* REVER Tooltips */
+@media (max-width: 600px) {
+  .hex-tooltip {
+    width: 220px;
+    height: 220px;
+  }
+  .hex-tooltip-content {
+    width: 200px;
+    height: 200px;
+  }
+}
 
 /* REVER SE GRID FAZ SENTIDO */
 

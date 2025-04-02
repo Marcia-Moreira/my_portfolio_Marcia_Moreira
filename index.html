@@ -94,12 +94,20 @@
             </div> <!-- interface -->
         </section> <!-- pag-start -->
 
-        <!--? INÍCIO BLOCO DE FAVOS DA COLMEIA: -->
+        <!--? INÍCIO BLOCO DE FAVOS DA COLMEIA: CANTO SUPERIOR ESQUERDO -->
         <!-- POSIÇÃO: section = menu e id = local onde está o favo -->
-        <div class="reveal-fade delay-300">
+        <div class="position-favos reveal-fade delay-300">
             <div class="section-start img-favoColmeia" id="cantoInferiorEsquerdo" data-img-favo="favos-cantoInferiorEsquerdo"></div>
+
+            <div class="section-start img-favoColmeia" id="cantoInferiorDireito" data-img-favo="favos-cantoInferiorDireito"></div>
         </div>
-        <!--? FIM BLOCO DE FAVOS DA COLMEIA -->
+        <!--? FIM BLOCO DE FAVOS DA COLMEIA: CANTO SUPERIOR ESQUERDO -->
+
+        <!--? INÍCIO BLOCO DE FAVOS DA COLMEIA: CANTO INFERIOR DIREITO-->
+        <!-- POSIÇÃO: section = menu e id = local onde está o favo -->
+        <!-- <div class="reveal-fade delay-300">
+        </div> -->
+        <!--? FIM BLOCO DE FAVOS DA COLMEIA: CANTO INFERIOR DIREITO -->
 
         </div> <!-- bg-colmeia -->
 <!-- PAGINA ABOUT -->
@@ -174,16 +182,16 @@
                                     </div> <!-- moldura-hexagono -->
 
                                     <!-- Tooltip esquerdo (para o hexágono 1) -->
-                                    <div class="hex-tooltip left-favo-1">
+                                    <div class="hex-tooltip primeira right-favo-1">
                                         <div class="hex-tooltip-content">
                                             <h3>Título do Projeto</h3>
                                             <p>Descrição breve do projeto que será exibido no hexágono 1.</p>
                                             <div class="hex-buttons">
-                                                <a href="#" class="hex-btn github">Código</a>
                                                 <a href="#" class="hex-btn deploy">Demo</a>
+                                                <a href="#" class="hex-btn github">Código</a>
                                             </div>
                                         </div>
-                                    </div> <!-- hex-tooltip left -->
+                                    </div> <!-- hex-tooltip right -->
 
                                 </div> <!-- container-favos-projects linha-1 -->
 <!-- ****************************************************************************************** -->
@@ -245,7 +253,7 @@
                                     </div>
 
                                     <!-- Tooltip esquerdo (para o hexágono 4) -->
-                                    <div class="hex-tooltip left-favo-4">
+                                    <div class="hex-tooltip right-favo-4">
                                         <div class="hex-tooltip-content">
                                             <h3>Título do Projeto</h3>
                                             <p>Descrição breve do projeto que será exibido no hexágono 4.</p>
@@ -316,7 +324,7 @@
                                     </div>
 
                                     <!-- Tooltip esquerdo (para o hexágono 7) -->
-                                    <div class="hex-tooltip left-favo-7">
+                                    <div class="hex-tooltip right-favo-7">
                                         <div class="hex-tooltip-content">
                                             <h3>Título do Projeto</h3>
                                             <p>Descrição breve do projeto que será exibido no hexágono 7.</p>
@@ -396,15 +404,16 @@
             </section> <!--section Colmeia-->
         </div> <!-- bg-colmeia -->
 <!-- FIM PAGINAS -->
-        <FOOter>
+        <Footer>
             <!-- FOOTER -->
-        </FOOter>
+        </Footer>
     </main>
     <script src="./js/colmeias-carregarFavosComponentes.js"></script>
     <!-- Usar DEFER para esperar a página carregar por completo -->
     <script src="./js/scrollreveal.js" defer></script>
     <script src="./js/animarFavosEmPares.js"></script>
     <script src="./js/aparicaoAleatoriaColmeia.js"></script>
+    <script src="./js/area-de-click-tooltip.js"></script>
     <!-- <script src="./js/scrollreveal.js"></script> -->
 </body>
 </html>
