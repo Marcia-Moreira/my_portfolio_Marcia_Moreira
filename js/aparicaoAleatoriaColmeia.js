@@ -22,7 +22,7 @@ async function carregarTodosFavos() {
 
 async function carregarFavo(container, nomeFavo) {
     try {
-        const response = await fetch(`../favosComponentes/${nomeFavo}.html`);
+        const response = await fetch(`./favosComponentes/${nomeFavo}.html`);
         if (!response.ok) throw new Error(`Erro ao carregar o favo: ${nomeFavo}`);
         const html = await response.text();
         container.innerHTML = html;

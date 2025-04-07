@@ -5,7 +5,7 @@
 async function carregarFavo(container, nomeFavo) {
     try {
         // Carrega o arquivo HTML do favo
-        const response = await fetch(`../favosComponentes/${nomeFavo}.html`);
+        const response = await fetch(`./favosComponentes/${nomeFavo}.html`);
         if (!response.ok) {
             throw new Error(`Erro ao carregar a img do Favo: ${nomeFavo}`);
         }
