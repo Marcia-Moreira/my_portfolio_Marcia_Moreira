@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous"> -->
     <!--? Início Instalação Google Fonts: Obs no CSS OK -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Krona+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <!--? Link de Ícons Bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!--? Fim Instalação Google Fonts: Obs no CSS OK -->
     <link rel="stylesheet" href="./static/css/style.css">
     <link rel="stylesheet" href="./static/css/styles-rootColors.css">
+    <link rel="stylesheet" href="./static/css/mmweb-logo.css">
     <!-- <link rel="stylesheet" href="./static/css/styles-favosAleatorios.css"> -->
     <!-- <link rel="stylesheet" href="./static/css/styles-favosMolduraFoto.css"> -->
     <!-- <link rel="stylesheet" href="./static/css/styles-favosMolduraProject.css"> -->
-    <link rel="stylesheet" href="./static/css/styles-responsividadeDeTela.css">
+    <link rel="stylesheet" href="./static/css/styles-responsividadeDeTela.css">    
     <!--? Biblioteca de Movimentos na Página: ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- <script>
@@ -28,11 +32,25 @@
     <header>
         <!-- Bordas Laterais da Página -->
         <div class="interface">
-            <!-- Logo -->
+            <!-- Esapaço para Logo: -->
             <div class="logo">
-                <a href="#">
-                    <img src="./img/img-MM/favicon.ico" alt="Logo-MM">
-                </a>
+                <a href="https://wa.me/5511977219430" alt="Meu_WhatsApp" target="_blank">
+                    <!-- <img src="./img/img-MM/favicon.ico" alt="Logo-MM"> -->
+                    <!-- Logo com escala padrão (1.0) (ex: 0.6, 1.0, 1.5, 2.0) -->
+                    <div class="logo-container-mmweb" style="--logo-scale: 0.6;">
+                        <div class="logo-moldura-borda-preta">
+                            <div class="logo-moldura-hexagono">
+                                <div class="logo-moldura-hexagono-profundo">
+                                    <div class="logo-mmweb">
+                                        <div class="top">M</div>
+                                        <div class="eb">eb</div>
+                                        <div class="base">MM</div>
+                                    </div> <!-- logo-mmweb -->
+                                </div> <!-- moldura-hexagono-profundo -->
+                            </div> <!-- moldura-hexagono -->
+                        </div> <!-- moldura-borda-preta -->
+                    </div> <!-- logo-container-mmweb -->
+                </a> <!-- logo-mmweb -->
             </div> <!-- logo -->
             <!-- Menu-Desktop -->
             <nav class="menu-desktop">
@@ -46,8 +64,9 @@
             </nav> <!-- menu-desktop -->
 
             <div class="btn-contato">
+                <!--! href="https://wa.me/5511977219430" alt="Meu_WhatsApp" target="_blank" -->
                 <a href="#contacts">
-                    <button>Contacts</button>
+                    <button> Contacts <i class="bi bi-whatsapp"></i></button>
                 </a>    
             </div> <!-- btn-contato -->
 
@@ -61,24 +80,24 @@
             <div class="interface">
                 <div class="flex">
                     <div class="txt-pag-start">
-                        <h1>Desenvolvedora Web <a href="skills.html" target="_blank"><span>FullStack</span></a></h1>
+                        <h1>Desenvolvedora Web <a href="./skills.html" target="_blank"><span>Full Stack</span></a></h1>
 
                         <P> Cada linha de código que aprendo é como um favo construído com paciência: organizado, eficiente e interligado ao todo. </P>
 
                         <div class="btns-contato">
                             <div class="btn-contato">
-                                <a href="#">
-                                    <button>Download CV</button>
+                                <a href="./MM_curriculo-042025.html">
+                                    <button> Download CV <i class="bi bi-file-earmark-arrow-down"></i></button>
                                 </a>
                             </div> <!-- btn-contato -->
     
                             <div class="btn-contato">
-                                <a href="#">
-                                    <button>Entre em contato</button>
+                                <a href="https://wa.me/5511977219430" alt="Meu_WhatsApp" target="_blank">
+                                    <button> Entre em contato <i class="bi bi-whatsapp"></i></button>
                                 </a>
                             </div> <!-- btn-contato -->
                         </div> <!-- btns-contato -->
-
+                        
                     </div> <!-- txt-pag-start -->
 
                     <div class="moldura-hexagono reveal-bottom delay-200">
@@ -94,20 +113,19 @@
             </div> <!-- interface -->
         </section> <!-- pag-start -->
 
-        <!--? INÍCIO BLOCO DE FAVOS DA COLMEIA: CANTO SUPERIOR ESQUERDO -->
+<!--? INÍCIO BLOCO DE FAVOS DA COLMEIA:  -->
         <!-- POSIÇÃO: section = menu e id = local onde está o favo -->
         <div class="position-favos reveal-fade delay-300">
+<!--? CANTO INFERIOR ESQUERDO -->
             <div class="section-start img-favoColmeia" id="cantoInferiorEsquerdo" data-img-favo="favos-cantoInferiorEsquerdo"></div>
-
+<!--? BLOCO DE MENSAGEM -->
+            <div class="section-start bloco-mensagens">
+                <p>"Cada linha de código que aprendo é como um favo <br> construído com paciência: <br> organizado, eficiente e interligado ao todo."<br> -MMWeb-</p>
+            </div>
+<!--? CANTO INFERIOR DIREITO -->
             <div class="section-start img-favoColmeia" id="cantoInferiorDireito" data-img-favo="favos-cantoInferiorDireito"></div>
         </div>
-        <!--? FIM BLOCO DE FAVOS DA COLMEIA: CANTO SUPERIOR ESQUERDO -->
-
-        <!--? INÍCIO BLOCO DE FAVOS DA COLMEIA: CANTO INFERIOR DIREITO-->
-        <!-- POSIÇÃO: section = menu e id = local onde está o favo -->
-        <!-- <div class="reveal-fade delay-300">
-        </div> -->
-        <!--? FIM BLOCO DE FAVOS DA COLMEIA: CANTO INFERIOR DIREITO -->
+<!--? FIM BLOCO DE FAVOS DA COLMEIA: -->
 
         </div> <!-- bg-colmeia -->
 <!-- PAGINA ABOUT -->
@@ -187,8 +205,8 @@
                                             <h3>Título do Projeto</h3>
                                             <p>Descrição breve do projeto que será exibido no hexágono 1.</p>
                                             <div class="hex-buttons">
-                                                <a href="#" class="hex-btn deploy">Demo</a>
-                                                <a href="#" class="hex-btn github">Código</a>
+                                                <a href="#" class="hex-btn deploy">Demo<i class="bi bi-globe-americas"></i></a>
+                                                <a href="#" class="hex-btn github">Código<i class="bi bi-code-slash"></i></a>
                                             </div>
                                         </div>
                                     </div> <!-- hex-tooltip right -->
@@ -212,8 +230,8 @@
                                             <h3>Título do Projeto</h3>
                                             <p>Descrição breve do projeto que será exibido no hexágono 2.</p>
                                             <div class="hex-buttons">
-                                                <a href="#" class="hex-btn github">Código</a>
-                                                <a href="#" class="hex-btn deploy">Demo</a>
+                                                <a href="#" class="hex-btn deploy">Demo<i class="bi bi-globe-americas"></i></a>
+                                                <a href="#" class="hex-btn github">Código<i class="bi bi-code-slash"></i></a>
                                             </div>
                                         </div>
                                     </div> <!-- hex-tooltip left -->
@@ -233,8 +251,8 @@
                                             <h3>Título do Projeto</h3>
                                             <p>Descrição breve do projeto que será exibido no hexágono 3.</p>
                                             <div class="hex-buttons">
-                                                <a href="#" class="hex-btn github">Código</a>
-                                                <a href="#" class="hex-btn deploy">Demo</a>
+                                                <a href="#" class="hex-btn deploy">Demo<i class="bi bi-globe-americas"></i></a>
+                                                <a href="#" class="hex-btn github">Código<i class="bi bi-code-slash"></i></a>                                                
                                             </div>
                                         </div>
                                     </div> <!-- hex-tooltip right -->   
@@ -258,8 +276,8 @@
                                             <h3>Título do Projeto</h3>
                                             <p>Descrição breve do projeto que será exibido no hexágono 4.</p>
                                             <div class="hex-buttons">
-                                                <a href="#" class="hex-btn github">Código</a>
-                                                <a href="#" class="hex-btn deploy">Demo</a>
+                                                <a href="#" class="hex-btn deploy">Demo<i class="bi bi-globe-americas"></i></a>
+                                                <a href="#" class="hex-btn github">Código<i class="bi bi-code-slash"></i></a>                                                
                                             </div>
                                         </div>
                                     </div> <!-- hex-tooltip left -->
@@ -283,8 +301,8 @@
                                             <h3>Título do Projeto</h3>
                                             <p>Descrição breve do projeto que será exibido no hexágono 5.</p>
                                             <div class="hex-buttons">
-                                                <a href="#" class="hex-btn github">Código</a>
-                                                <a href="#" class="hex-btn deploy">Demo</a>
+                                                <a href="#" class="hex-btn deploy">Demo<i class="bi bi-globe-americas"></i></a>
+                                                <a href="#" class="hex-btn github">Código<i class="bi bi-code-slash"></i></a>                                                
                                             </div>
                                         </div>
                                     </div> <!-- hex-tooltip left -->
@@ -304,8 +322,8 @@
                                             <h3>Título do Projeto</h3>
                                             <p>Descrição breve do projeto que será exibido no hexágono 6.</p>
                                             <div class="hex-buttons">
-                                                <a href="#" class="hex-btn github">Código</a>
-                                                <a href="#" class="hex-btn deploy">Demo</a>
+                                                <a href="#" class="hex-btn deploy">Demo<i class="bi bi-globe-americas"></i></a>
+                                                <a href="#" class="hex-btn github">Código<i class="bi bi-code-slash"></i></a>                                                
                                             </div>
                                         </div>
                                     </div> <!-- hex-tooltip right -->
@@ -329,8 +347,8 @@
                                             <h3>Título do Projeto</h3>
                                             <p>Descrição breve do projeto que será exibido no hexágono 7.</p>
                                             <div class="hex-buttons">
-                                                <a href="#" class="hex-btn github">Código</a>
-                                                <a href="#" class="hex-btn deploy">Demo</a>
+                                                <a href="#" class="hex-btn deploy">Demo<i class="bi bi-globe-americas"></i></a>
+                                                <a href="#" class="hex-btn github">Código<i class="bi bi-code-slash"></i></a>                                                
                                             </div>
                                         </div>
                                     </div> <!-- hex-tooltip left -->
@@ -354,8 +372,8 @@
                                             <h3>Título do Projeto</h3>
                                             <p>Descrição breve do projeto que será exibido no hexágono 8.</p>
                                             <div class="hex-buttons">
-                                                <a href="#" class="hex-btn github">Código</a>
-                                                <a href="#" class="hex-btn deploy">Demo</a>
+                                                <a href="#" class="hex-btn deploy">Demo<i class="bi bi-globe-americas"></i></a>
+                                                <a href="#" class="hex-btn github">Código<i class="bi bi-code-slash"></i></a>                                                
                                             </div>
                                         </div>
                                     </div> <!-- hex-tooltip left -->
@@ -375,8 +393,8 @@
                                             <h3>Título do Projeto</h3>
                                             <p>Descrição breve do projeto que será exibido no hexágono 9.</p>
                                             <div class="hex-buttons">
-                                                <a href="#" class="hex-btn github">Código</a>
-                                                <a href="#" class="hex-btn deploy">Demo</a>
+                                                <a href="#" class="hex-btn deploy">Demo<i class="bi bi-globe-americas"></i></a>
+                                                <a href="#" class="hex-btn github">Código<i class="bi bi-code-slash"></i></a>                                                
                                             </div>
                                         </div>
                                     </div> <!-- hex-tooltip right -->
@@ -408,6 +426,8 @@
             <!-- FOOTER -->
         </Footer>
     </main>
+    <!--? Link de Ícons Bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
     <script src="./js/colmeias-carregarFavosComponentes.js"></script>
     <!-- Usar DEFER para esperar a página carregar por completo -->
     <script src="./js/scrollreveal.js" defer></script>

@@ -58,3 +58,26 @@
         grid-template-columns: repeat(4, 1fr);
     }
   }
+
+/* *********************************************** */
+/* Rever se faz sentido: diminuir os favos da tela principal */
+
+/* @media (max-width: 768px) {
+  .img-favoColmeia {
+    width: 100px;
+  }
+  .bg-colmeia .position-favos {
+    padding: 0 10px;
+  }
+} */
+
+/* *********************************************** */
+
+@media (max-width: 600px) {
+  .hex-buttons {
+    flex-direction: column; /* Empilha em telas pequenas */
+  }
+  .hex-btn {
+    width: 100% !important;
+  }
+}

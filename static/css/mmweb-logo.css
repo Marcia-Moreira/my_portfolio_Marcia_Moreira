@@ -1,0 +1,195 @@
+/*? *************************************** */
+/*? CSS DO LOGO MMWeb: */
+/*? *************************************** */
+
+/* **************************************** */
+/** => OPÇÕES DE FONTES: */
+/* **************************************** */
+/* => FONTES GoogleFonts: */
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Playfair+Display:wght@700&family=Cormorant+Garamond:wght@700&display=swap');
+
+/* **************************************** */
+/** => ROOT DO PROJETO: */
+/* **************************************** */
+    :root {
+      /** CORES DO FUNDO: */ 
+      --cor-fundo-escuro: #000;
+      --cor-fundo-claro: #f1f1f1;
+
+      /** CORES DE DESTAQUE: */
+      --cor-primaria: #A25D11;
+      --cor-secundaria: #CE9004;
+
+      /** CORES DE HOVER */
+      --cor-hover-primaria: #d27819;
+      --cor-hover-secundaria: #eba604;
+
+      /** FONTES POSSÍVEIS:  */
+      --fonte-times: 'Times New Roman', Times, serif;
+      --fonte-open-sans: 'Open Sans', sans-serif;
+      --fonte-arial: 'Arial', sans-serif;
+      --fonte-courier: 'Courier New', sans-serif;
+      --fonte-lora: 'Lora', serif;
+      --fonte-cormorant: 'Cormorant Garamond', serif;
+      --fonte-playfair: 'Playfair Display', serif;
+      --fonte-eb-garamond: 'EB Garamond', serif;
+
+      /** ESCALAS DE TAMANHO DA LOGO: Orientações no rodapé */
+      --logo-scale: 1; /* Escala padrão Variável */
+      /* (ex: 0.6, 1.0, 1.5, 2.0) */
+      /** DIMENSÕES ESCALADAS (quando scale = 1) */
+      --width-borda: 162px;
+      --width-hexagono: 160px; 
+      --width-profundo: 160px;
+      }
+/** **************************************** */
+/** => ESTILIZAÇÃO GERAL DO PROJETO: */
+/* **************************************** */
+    .logo-container-mmweb {
+      background: var(--cor-fundo-escuro);
+      /* background: var(--cor-fundo-claro); */
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* height: 100vh; */
+      /** => ESCOLHA de FONTE: */
+      font-family: var(--fonte-times);
+      font-family: var(--fonte-open-sans);
+      font-family: var(--fonte-arial);
+      font-family: var(--fonte-courier);
+      font-family: var(--fonte-lora);
+      font-family: var(--fonte-playfair);
+      font-family: var(--fonte-eb-garamond);
+      font-family: var(--fonte-cormorant);
+    }
+    .logo-container {
+      --logo-width: calc(var(--logo-width-base) * var(--logo-scale));
+      --logo-height: calc(var(--logo-height-base) * var(--logo-scale));
+      /* Aplica a escala a todos os elementos filhos: */
+      font-size: var(--logo-scale);
+    }
+    .logo-mmweb {
+      position: relative;
+      font-size: calc(80px * var(--logo-scale));
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      text-align: center;
+      /* Única Maneira de Centralizar: */
+      top: 10%;
+      left: -4%;
+      transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
+    }
+    /** => BASE = Letras MM */
+    .logo-mmweb .base {
+        position: relative;
+        color: var(--cor-primaria); /* MM */
+        /* Relativo ao .logo: */
+        font-size: 1em;
+        letter-spacing: calc(-11px * var(--logo-scale));
+        transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
+    }
+    /** => TOP = Letra W */
+    .logo-mmweb .top {
+        position: absolute;
+        top: calc(-44px * var(--logo-scale));
+        left: calc(28.8px * var(--logo-scale));
+        color: var(--cor-secundaria); /* W */
+        font-size: calc(84px * var(--logo-scale));
+        z-index: 1;
+        /* Para por o M de cabeça pra Baixo: W */
+        transform: rotate(180deg);
+        transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
+    }
+    /** => TOP = Letras eb */
+    .logo-mmweb .eb {
+        position: absolute;
+        top: calc(-4px * var(--logo-scale));
+        left: calc(102px * var(--logo-scale));
+        color: var(--cor-secundaria); /*eb */
+        font-size: calc(20px * var(--logo-scale));
+        letter-spacing: calc(4px * var(--logo-scale));
+        z-index: 1;
+        transition: transform 0.9s ease-in-out, color 0.5s ease-in-out;
+    }
+    /** => EFEITO ASCENDER LOGO: hover */
+    .logo-mmweb:hover .base {
+      /* Efeito "Ascender" */
+      color: var(--cor-hover-primaria);
+      transform: translateY(calc(-10px * var(--logo-scale)));
+    }
+    .logo-mmweb:hover .top {
+      /* Efeito "Ascender" */
+      color: var(--cor-hover-secundaria);
+      /* Para manter o M de cabeça pra Baixo: W */
+      transform: rotate(180deg);
+    }
+    .logo-mmweb:hover .eb {
+      /* Efeito "Ascender" + Rotação 360 graus */
+      color: var(--cor-hover-secundaria);
+      transform: translateX(calc(-5px * var(--logo-scale))) translateY(calc(-12px * var(--logo-scale))) rotate(360deg);
+    }
+/* **************************************** */
+/** => MOLDURA EXAGONO CENTRAL:*/
+/* **************************************** */
+/* Moldura Exagonal: */
+    .logo-moldura-borda-preta {
+      width: calc(var(--width-borda) * var(--logo-scale));
+      height: calc(var(--width-borda) * 1.12 * var(--logo-scale));
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: calc(12px * var(--logo-scale));
+      transition: transform 0.3s ease-in-out;
+      background-color: var(--cor-fundo-escuro);
+    }
+    .logo-moldura-hexagono {
+      width: calc(var(--width-hexagono) * var(--logo-scale));
+      height: calc(var(--width-hexagono) * 1.125 * var(--logo-scale));
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: calc(12px * var(--logo-scale));
+      transition: transform 0.3s ease-in-out;
+      background: linear-gradient(
+          65deg,
+          #A25D11 0%,
+          #CE9004 25%,
+          #CCB50F 50%,
+          #CE9004 75%,
+          #A25D11 100%
+        );
+    }
+    .logo-moldura-hexagono:hover {
+      transform: scale(1.005);
+      cursor: pointer;
+      background: linear-gradient(
+            45deg, /* Ângulo do gradiente */
+            #A25D11 0%,
+            #CE9004 25%,
+            #CCB50F 50%, /* Cor 1 no início */
+            #CE9004 75%, /* Cor 2 no meio */
+            #A25D11 100% /* Cor 3 no final */
+        );
+    }
+    .logo-moldura-hexagono-profundo {
+      width: calc(var(--width-hexagono) * var(--logo-scale));
+      height: calc(var(--width-hexagono) * 1.093 * var(--logo-scale));
+      background-color: var(--cor-fundo-escuro);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: calc(92px * var(--logo-scale));
+      box-shadow: 0 14px 18px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease-in-out;
+    }
+    .logo-moldura-hexagono-profundo:hover {
+      transform: scale(1.005);
+      cursor: pointer;
+    }
+/* **************************************** */
+/* **************************************** */
