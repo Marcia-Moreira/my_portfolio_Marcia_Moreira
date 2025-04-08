@@ -8,11 +8,47 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
+    /* Sobreposição para todos acima dos favos: */
+    z-index: 2;
 }
-/* *************************************** */
-/** ROOT de CORES ESPECÍFICAS DE FAVOS: */
-/* *************************************** */
+/** ROOT DE CORES DO PROJETO: */
 :root {
+  /* *************************************** */
+  /** ROOT de CORES GERAL DO PROJETO */
+  /* *************************************** */
+  /* DARK */
+  /* BackGround: */
+  --cor-bg-primaria: #000;
+  --cor-bg-secundaria: #a9a7a7;
+  --cor-bg-terciaria: #f1f1f1;
+  /* Texto: */
+  --cor-txt-primaria: #f1f1f1;
+  --cor-txt-secundaria: #000;
+  --cor-txt-terciaria: #a9a7a7;
+  --cor-txt-quaternaria: rgb(89, 88, 88);
+  --cor-txt-quinaria: rgb(65, 64, 64);
+  /* #c9c5c5 */
+
+  /* Contrastes: */
+  /* --cor-ctt-primaria: rgb(248, 163, 87); */
+  /* --cor-ctt-primaria: #ffd700; */
+  --cor-ctt-primaria: #daa520;
+  /* --cor-ctt-primaria: #b8860b; */
+  /* --cor-ctt-primaria: #b29146; */
+  /* Levemente mais escuras: */
+  --cor-ctt-primaria: #b98d1b;
+
+  /* Levemente Mais Clara/Acesa: */
+  --cor-ctt-secundaria: rgb(253, 175, 106);
+  --cor-ctt-secundaria: #fcdb22;
+  --cor-ctt-secundaria: #efb523;
+  --cor-ctt-secundaria: #cb950d;
+  --cor-ctt-secundaria: #c9a550;
+
+  /* ----- */
+  /* *************************************** */
+  /** ROOT de CORES ESPECÍFICAS DE FAVOS: */
+  /* *************************************** */
   /* CORES DE REFERÊNCIA ESTILIZAÇÃO DOS FAVOS: */
   --color_01: #CE8604;
   --color_02: #CE9004;
@@ -37,8 +73,13 @@
   --cor-ctt-bd_color-01: #CCAC0C;
   --cor-ctt-bg_color-02: #CE9004;
   --cor-ctt-bg_color-03: #c38004;
-}
 
+  /* Cores dos Exagonos: */
+  --cor-ctt-bd_exag-01: #CCAC0C;
+  --cor-ctt-bg_exag-02: #CE9004;
+  --cor-ctt-bg_exag-03: #c38004;
+
+}
 /* *************************************** */
 /** ESTILO DE FONTES: */
 /* *************************************** */
@@ -72,38 +113,18 @@ body {
   background-color: var(--cor-bg-primaria);
   color: var(--cor-txt-primaria);
 }
-/* *************************************** */
-/** ESTILO DAS PAGINAS: */
-/* *************************************** */
-section.pag-about {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+/* Ajuste o valor para a altura do seu header */
+section #start {
+  scroll-margin-top: 0;
 }
-section.pag-skills {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+section #about,
+section #especialities,
+section #skills,
+section #projects,
+section #contacts {
+  scroll-margin-top: 180px;
 }
-section.pag-projects {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-section.pag-contacts {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-/*? Espaçamento Borda Lateral: */
+/** ESPAÇAMENTO DE BORDA LATERAL: */
 .interface {
   max-width: 1280px;
   margin: 0 auto;
@@ -111,8 +132,29 @@ section.pag-contacts {
 .flex {
   display: flex;
 }
-/* ESTILIZAÇÃO DE BOTÕES: */
-
+/* *************************************** */
+/** ESTILIZAÇÃO DE CONTAINERS: */
+/* *************************************** */
+.bloco-central-titulo,
+.bloco-central-texto {
+  flex-direction: column;
+  padding: 0 1rem 1rem 1rem;
+}
+.bloco-central-titulo h1,
+.bloco-central-texto p {
+  text-align: center;
+  /* margin-bottom: 1rem; */
+  width: 100%;
+}
+.bloco-central-img {
+  flex: 1; /* ocupa o espaço central */
+  width: 100%;
+  margin: 0 auto; /* centraliza horizontalmente */
+  justify-content: center;
+}
+/* *********************************** */
+/** ESTILIZAÇÃO DE BOTÕES: GERAIS */
+/* *********************************** */
 /* <i class="bi bi-github"></i> */
 /* <i class="bi bi-git"></i> */
 /* <i class="bi bi-geo-alt"></i> */
@@ -131,10 +173,48 @@ section.pag-contacts {
 /* <i class="bi bi-translate"></i> */
 /* <i class="bi bi-whatsapp"></i> */
 /* <i class="bi bi-globe"></i> */
+button {
+  position: relative;
+  z-index: 10; /* Garante que os botões estão acima do fundo */
+}
+/* ******************************* */
+/** BOTÕES REDES SOCIAIS: EM FAVOS */
+/* ******************************* */
+.btn-social {
+  padding-top: 40px;
+}
+.btn-social button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  color: var(--cor-txt-quinaria);
+  font-size: 25px;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+.btn-social button:hover {
+  color: var(--cor-txt-quaternaria);
+  cursor: pointer;
+  transform: scale(1.005);
+  z-index: 2;
+}
+.btn-social button i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-social .hexagono.piscando {
+  /* animation: piscar 1s infinite; */
+  animation: none;
+}
+/* ******************************* */
+/** BOTÕES DE CONTATOS: RETANGULAR */
+/* ******************************* */
 .btns-contato {
   display: flex;
   gap: 10%;
-
   width: 100%;
   justify-content: center;
 }
@@ -177,41 +257,6 @@ section.pag-contacts {
   font-size: 1.1em;
   vertical-align: middle;  /* Alinhamento vertical */
 }
-.section-skills .bloco-central {
-  justify-content: space-between; 
-  padding: 2rem 0; /* espaçamento vertical */
-  flex-direction: column;
-}
-.section-skills .favo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centraliza verticalmente */
-  align-items: center; /* centraliza horizontalmente */
-  margin: 0 auto; /* centraliza horizontalmente */
-}
-.bloco-central-titulo,
-.bloco-central-texto {
-  flex-direction: column;
-  padding: 0 1rem 1rem 1rem;
-}
-.bloco-central-titulo h1,
-.bloco-central-texto p {
-  text-align: center;
-  /* margin-bottom: 1rem; */
-  width: 100%;
-}
-.bloco-central-img {
-  flex: 1; /* ocupa o espaço central */
-  width: 100%;
-  margin: 0 auto; /* centraliza horizontalmente */
-  justify-content: center;
-}
-/* Se as imagens ainda estiverem à esquerda dentro do bloco: */
-.bloco-central-img .img-favoColmeia {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
 /* *************************************** */
 /** ESTILO DAS MENSAGENS: */
 /* *************************************** */
@@ -236,7 +281,6 @@ section.pag-contacts {
   color: var(--cor-txt-primaria);
   transform: scale(1.005);
 }
-
 /* *************************************** */
 /** ESTILO DO CABEÇALHO: */
 /* *************************************** */
@@ -263,7 +307,7 @@ header nav ul {
 }
 header nav ul li {
   display: inline-block;
-  padding: 0 15%;
+  padding: 0 8%;
 }
 /* *************************************** */
 /** ESTILIZAÇÃO DOS MOVIMENTOS BIBLIOTECA SCROLLREVEAL:  */
@@ -283,73 +327,14 @@ header nav ul li {
     /* Esconder a propriedade */
     visibility: hidden;
 }
-/* *************************************** */
-/** ESTILO PÁGINA - START: */
-/* *************************************** */
-section.pag-start {
-  padding: 0 2%;
-  padding-top: 4%;
-}
-section.pag-start .flex {
-  align-items: center;
-  justify-content: center;
-  gap: 2%;
-}
-section.pag-start .txt-pag-start {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  flex-direction: column;
-}
-section.pag-start .txt-pag-start h1 {
-  color: var(--cor-txt-terciaria);
-  font-size: 32px;
-  line-height: 40px;
-  align-self: flex-start;
-  width: 100%;
-  margin: 0 0 2rem 0;
-}
-section.pag-start .txt-pag-start h1:hover {
-  color: var(--cor-txt-primaria);
-}
-section.pag-start .txt-pag-start h1 span {
-  color: var(--cor-ctt-primaria);
-  font-size: 38px;
-  transition: 0.2s;
-}
-section.pag-start .txt-pag-start h1 span:hover {
-  color: var(--cor-ctt-secundaria);
-  cursor: pointer;
-}
-section.pag-start .txt-pag-start p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  line-height: 34px;
-  color: var(--cor-txt-terciaria);
-  margin: 4% 0;
-  font-weight: 400;
-  align-self: flex-start;
-  width: 100%;
-  margin: 0 0 2rem 0;
-}
-section.pag-start .img-pag-start img {
-  width: 200px;
-  max-width: 300px;
-  height: auto;
-  border-radius: 20px 0 20px 0;
-  /* Efeito Flutuação da Imagem: */
-  position: relative;
-  animation: flutuar 2s ease-in-out infinite alternate;
-}
-@keyframes flutuar {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: 30px;
-  }
-}
+/*! *************************************** */
+/*! início APENAS PARA AJUDAR A ESCOLHER AS CORES: */
+
+
+
+/*! fim APENAS PARA ESCOLHER AS CORES */
+/*! *************************************** */
+
 /* **************************************** */
 /** MOLDURA EXAGONO DA FOTO DE PERFIL:*/
 /* **************************************** */
@@ -411,7 +396,277 @@ section.pag-start .img-pag-start img {
     );
 }
 /* *************************************** */
-/** PÁGINA PROJECTS: */
+/** 00 - ESTILO DAS PAGINAS: GERAIS */
+/* *************************************** */
+section.pag-start {
+  min-height: 100vh;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+section.pag-about {
+  min-height: 100vh;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+section.pag-especialities {
+  min-height: 100vh;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+section.pag-skills {
+  min-height: 100vh;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+section.pag-projects {
+  min-height: 100vh;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+section.pag-contacts {
+  min-height: 100vh;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+/* *************************************** */
+/** 01 - ESTILO PÁGINA - START: */
+/* *************************************** */
+section.pag-start {
+  padding: 0 2%;
+  padding-top: 4%;
+}
+section.pag-start .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+}
+section.pag-start .txt-pag-start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-direction: column;
+}
+section.pag-start .txt-pag-start h1 {
+  color: var(--cor-txt-terciaria);
+  font-size: 32px;
+  line-height: 40px;
+  align-self: flex-start;
+  width: 100%;
+  margin: 0 0 2rem 0;
+}
+section.pag-start .txt-pag-start h1:hover {
+  color: var(--cor-txt-primaria);
+}
+section.pag-start .txt-pag-start h1 span {
+  color: var(--cor-ctt-primaria);
+  font-size: 38px;
+  line-height: 60px;
+  display: block;
+  transition: 0.2s;
+}
+section.pag-start .txt-pag-start h1 span:hover {
+  color: var(--cor-ctt-secundaria);
+  cursor: pointer;
+}
+section.pag-start .txt-pag-start p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 34px;
+  color: var(--cor-txt-terciaria);
+  margin: 4% 0;
+  font-weight: 400;
+  align-self: flex-start;
+  width: 100%;
+  margin: 0 0 2rem 0;
+}
+section.pag-start .img-pag-start img {
+  width: 200px;
+  max-width: 300px;
+  height: auto;
+  border-radius: 20px 0 20px 0;
+  /* Efeito Flutuação da Imagem: */
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+  transform: all 0.4s ease-in-out;
+}
+@keyframes flutuar {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
+  }
+}
+/* *************************************** */
+/** 02 - PÁGINA ABOUT: */
+/* *************************************** */
+section.pag-about {
+  padding: 40px 4%;
+}
+section.pag-about .flex {
+  align-items: center;
+  gap: 60px;
+}
+section.pag-about .img-pag-about img {
+  width: 600px;
+  height: auto;
+  box-shadow: 0px 0px 30px var(--cor-ctt-primaria);
+  border-radius: 15px;
+}
+section.pag-about .bloco-central-texto {
+  color: var(--cor-txt-terciaria);
+}
+section.pag-about .bloco-central-texto h2 {
+  font-size: 32px;
+  line-height: 60px;
+  margin-bottom: 30px;
+  transition: all 0.2s ease-in-out;
+}
+section.pag-about .bloco-central-texto h2:hover {
+  color: var(--cor-txt-primaria);
+}
+section.pag-about .bloco-central-texto h2 span {
+  color: var(--cor-ctt-primaria);
+  font-size: 38px;
+  display: block;
+  transition: all 0.3s ease-in-out; 
+}
+section.pag-about .bloco-central-texto h2 span:hover {
+  color: var(--cor-ctt-secundaria);
+  cursor: pointer;
+}
+section.pag-about .bloco-central-texto p {
+  margin: 20px 0;
+  text-align: justify;
+}
+/* Botões das Redes Sociais: */
+section.pag-about .btn-social {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+/* *************************************** */
+/** 03 - ESTILO PÁGINA - ESPECIALITIES: */
+/* *************************************** */
+section.pag-especialities {
+  padding: 0 5%;
+  padding-top: 2%;
+  margin-bottom: 2vh;
+  height: 100vh;
+  align-items: stretch;
+}
+section.pag-especialities .flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+}
+section.pag-especialities .bloco-central .bloco-central-titulo h1 {
+  font-size: 32;
+  padding: 10px;
+  flex-direction: column;
+  color: var(--cor-txt-terciaria);
+  transition: all 0.3s ease-in-out; 
+}
+section.pag-especialities .bloco-central .bloco-central-titulo h1:hover {
+  color: var(--cor-txt-primaria);
+  cursor: pointer;
+  transform: scale(1.01);
+}
+section.pag-especialities .bloco-central .bloco-central-titulo h1 span {
+  color: var(--cor-ctt-primaria);
+  font-size: 38px;
+  transition: all 0.3s ease-in-out; 
+}
+section.pag-especialities .bloco-central .bloco-central-titulo h1 span:hover {
+  color: var(--cor-ctt-secundaria);
+  cursor: pointer;
+}
+/* Quadrinhos de Especialidades: */
+.pag-especialities .especialities-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 3%;
+  margin-bottom: 2%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 8px var(--cor-ctt-primaria);
+  transition: all 0.3s ease-in-out;
+  width: 28vw;
+  min-width: 250px;
+  height: 75vh;
+  min-height: 450px;
+  max-height: 600px;
+  flex: 1;
+  justify-content: space-between;
+  overflow: hidden;
+  margin: 2% 1%;
+}
+.pag-especialities .especialities-box:hover {
+  transform: scale(1.005);
+  border: 2px solid var(--cor-ctt-primaria);
+}
+.pag-especialities .especialities-box i {
+  font-size: 70px;
+  color: var(--cor-ctt-primaria);
+}
+.pag-especialities .especialities-box:hover i {
+  color: var(--cor-ctt-secundaria);
+  transition: all 0.3s ease-in-out;
+}
+.pag-especialities .especialities-box h3 {
+  font-size: 24px;
+  color: var(--cor-txt-primaria);
+  margin: 15px 0;
+  transition: all 0.2s ease-in-out; 
+}
+.pag-especialities .especialities-box h3:hover {
+  color: var(--cor-txt-terciaria);
+}
+.pag-especialities .especialities-box p {
+  font-size: 18px;
+  color: var(--cor-txt-terciaria);
+  line-height: 30px;
+}
+/* *************************************** */
+/** 04 - PÁGINA SKILLS: */
+/* *************************************** */
+.section-skills .bloco-central {
+  justify-content: space-between; 
+  padding: 2rem 0; /* espaçamento vertical */
+  flex-direction: column;
+}
+.section-skills .favo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centraliza verticalmente */
+  align-items: center; /* centraliza horizontalmente */
+  margin: 0 auto; /* centraliza horizontalmente */
+}
+/* Se as imagens ainda estiverem à esquerda dentro do bloco: */
+.bloco-central-img .img-favoColmeia {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+/* *************************************** */
+/** 05 - PÁGINA PROJECTS: */
 /* *************************************** */
 section.pag-projects {
   padding: 0 5%;
@@ -478,9 +733,21 @@ section.pag-projects {
         #A25D11 100% /* Cor 3 no final */
     );
 }
+/* *************************************** */
+/** 05 - PAGINA CONTACTS */
+/* *************************************** */
+section.pag-contacts {
+  padding: 0 5%;
+  /*! Verificar como Arrumar isso! */
+  padding-top: 60%;
+  top: 20%;
+}
+
+
+
 
 /* *************************************** */
-/** TOOLTIP - CAIXA DE TEXTO DOS PROJETOS */
+/** TOOLTIP PROJECTS - CAIXA DE TEXTO DOS PROJETOS */
 /* *************************************** */
 /* Container principal - ajuste conforme sua estrutura atual */
 /* Estilo dos tooltips hexagonais */
@@ -575,7 +842,6 @@ section.pag-projects {
   letter-spacing: 2px;
   transition: all 0.2s ease;
   border: 1px solid rgba(255, 255, 255, 0.3);
-
   white-space: nowrap; 
   display: inline-flex;
   align-items: center;
@@ -719,7 +985,7 @@ section.pag-projects {
 
 
 /* *************************************** */
-/** ESTILIZAÇÃO FAVOS - COLMEIAS: */
+/** FAVOS/COLMEIAS: ICONS, BADGES, GIFS */
 /* *************************************** */
 .favo img {
   display: flex;
@@ -748,6 +1014,17 @@ section.pag-projects {
   margin: 0;
   padding: 0;
 }
+/* Para Habilitar os Botões mesmo com Favos: */
+/* Para Cuidar do Hover Funcionando: */
+.img-favoColmeia {
+  pointer-events: none;
+  z-index: 1;
+}
+.img-favoColmeia * {
+  pointer-events: auto; /* Reativa interações nos filhos */
+  z-index: 2;
+}
+/* ----------------------------------- */
 .bg-colmeia .position-favos {
   position: absolute;
   bottom: -2%;
@@ -763,18 +1040,30 @@ section.pag-projects {
 .position-favos > * {
   pointer-events: auto;
 }
-/* Favo do Canto Esquerdo: */
-.bg-colmeia #cantoInferiorEsquerdo {
+/* Favo do Canto Esquerdo: Pag Start */
+#cantoInferiorEsquerdo {
   position: relative;
   left: 0;
   margin-left: -2%;
 }
-/* Favo do Canto Direito: */
-.bg-colmeia #cantoInferiorDireito {
+/* Favo do Canto Direito: Pag Start */
+#cantoInferiorDireito {
   position: relative;
   right: 0;
-  margin-right: -2%;
+  margin-right: -3%;
 }
+/* Favo do Canto Direito: Pag About*/
+#cantoInferiorDireitoAbout {
+  /* pointer-events: none; */
+  pointer-events: auto;
+  position: relative;
+  right: 0;
+  margin-right: -3%;
+  margin-top: -45%;
+  height: 50vh;
+  z-index: 1;
+}
+/* Favo Central: Pag Skills*/
 .bg-colmeia #centralGrande {
   display: flex;
   justify-content: center;
@@ -1007,11 +1296,13 @@ section.pag-projects {
   background-position: center; 
   /* Importante para manter o foco */
 }
-/* *************************************** */
-/** PAGINA CONTACTS */
-/* *************************************** */
-section.pag-contacts {
-  padding: 0 5%;
-  /*! Verificar como Arrumar isso! */
-  padding-top: 50%;
+/* ************************************* */
+/** CANELAMENTO DE EFEITOS ESPECÍFICOS:  */
+/* ************************************* */
+/* ---- */
+/* Cancela o Atraso em aparecer dos Botões Redes Sociais: */
+.btn-social .hexagono {
+  opacity: 1;
 }
+/* ************************************* */
+/* ************************************* */

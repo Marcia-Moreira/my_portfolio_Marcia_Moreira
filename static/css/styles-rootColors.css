@@ -21,9 +21,11 @@
     /* Contrastes: */
     /* --cor-ctt-primaria: rgb(248, 163, 87); */
     /* --cor-ctt-primaria: #ffd700; */
-    --cor-ctt-primaria: #daa520;
+    /* --cor-ctt-primaria: #daa520; */
     /* --cor-ctt-primaria: #b8860b; */
     /* --cor-ctt-primaria: #b29146; */
+    /* Levemente mais escuras: */
+    --cor-ctt-primaria: #b98d1b;
 
     /* Levemente Mais Clara/Acesa: */
     --cor-ctt-secundaria: rgb(253, 175, 106);
@@ -32,8 +34,6 @@
     --cor-ctt-secundaria: #cb950d;
     --cor-ctt-secundaria: #c9a550;
 
-    /* Levemente mais escuras: */
-    --cor-ctt-primaria: #b98d1b;
 
     /* Cores dos Exagonos: */
     --cor-ctt-bd_exag-01: #CCAC0C;

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!--? Fim Instalação Google Fonts: Obs no CSS OK -->
     <link rel="stylesheet" href="./static/css/style.css">
-    <link rel="stylesheet" href="./static/css/styles-rootColors.css">
+    <!-- <link rel="stylesheet" href="./static/css/styles-rootColors.css"> -->
     <link rel="stylesheet" href="./static/css/mmweb-logo.css">
     <!-- <link rel="stylesheet" href="./static/css/styles-favosAleatorios.css"> -->
     <!-- <link rel="stylesheet" href="./static/css/styles-favosMolduraFoto.css"> -->
@@ -29,7 +29,7 @@
 </head>
 <body>
 <!-- INÍCIO HEADER -->
-    <header>
+    <header id="start">
         <!-- Bordas Laterais da Página -->
         <div class="interface">
             <!-- Esapaço para Logo: -->
@@ -58,6 +58,7 @@
                     <!-- Rever se deixa as páginas num mesmo html ou se separamos -->
                     <li><a href="#start" target="_blank">Start</a></li>
                     <li><a href="#about" target="_blank">About</a></li>
+                    <li><a href="#especialities" target="_blank">Specialities</a></li>
                     <li><a href="skills.html" target="_blank">Skills</a></li>
                     <li><a href="#projects" target="_blank">Projects</a></li>
                 </ul>
@@ -74,7 +75,8 @@
     </header>
 <!-- FIM HEADER -->
     <main>
-        <div class="bg-colmeia" id="start">
+        <!--! retirei o id start -->
+        <div class="bg-colmeia">
 <!-- PAGINA START -->
         <section class="pag-start">
             <div class="interface">
@@ -113,19 +115,21 @@
             </div> <!-- interface -->
         </section> <!-- pag-start -->
 
+        <section class="background-favos">
 <!--? INÍCIO BLOCO DE FAVOS DA COLMEIA:  -->
-        <!-- POSIÇÃO: section = menu e id = local onde está o favo -->
-        <div class="position-favos reveal-fade delay-300">
+            <!-- POSIÇÃO: section = menu e id = local onde está o favo -->
+            <div class="position-favos reveal-fade delay-300">
 <!--? CANTO INFERIOR ESQUERDO -->
-            <div class="section-start img-favoColmeia" id="cantoInferiorEsquerdo" data-img-favo="favos-cantoInferiorEsquerdo"></div>
+                <div class="section-start img-favoColmeia" id="cantoInferiorEsquerdo" data-img-favo="favos-cantoInferiorEsquerdo"></div>
 <!--? BLOCO DE MENSAGEM -->
-            <div class="section-start bloco-mensagens">
-                <p>"Cada linha de código que aprendo é como um favo <br> construído com paciência: <br> organizado, eficiente e interligado ao todo."<br> -MMWeb-</p>
-            </div>
+                <div class="section-start bloco-mensagens">
+                    <p>"Cada linha de código que aprendo é como um favo <br> construído com paciência: <br> organizado, eficiente e interligado ao todo."<br> -MMWeb-</p>
+                </div>
 <!--? CANTO INFERIOR DIREITO -->
-            <div class="section-start img-favoColmeia" id="cantoInferiorDireito" data-img-favo="favos-cantoInferiorDireito"></div>
-        </div>
+                <div class="section-start img-favoColmeia" id="cantoInferiorDireito" data-img-favo="favos-cantoInferiorDireito"></div>
+            </div> <!-- position-favos -->
 <!--? FIM BLOCO DE FAVOS DA COLMEIA: -->
+        </section> <!-- background-favos -->
 
         </div> <!-- bg-colmeia -->
 <!-- PAGINA ABOUT -->
@@ -134,20 +138,92 @@
                 <div class="interface">
                     <div class="flex">
                         <div class="bloco-central">
+
                             <div class="bloco-central-titulo">
-                                <h1>ABOUT</h1>
+                                <h1></h1>
                             </div> <!-- bloco-central-titulo -->
-                            <div class="bloco-central-texto">
-                                <p>- Sobre Marcia Moreira -</p>
-                            </div> <!-- bloco-central-texto -->
-                            <div class="bloco-central-img reveal-fade delay-300">
-                                <!-- <div class="section-skills img-favoColmeia" id="centralMedio" data-img-favo="favos-centralMedio"></div> -->
-                                <h2>IMAGENS</h2>
-                            </div> <!-- bloco-central-img -->
+                            <div class="flex">
+                                <div class="bloco-central-img reveal-fade delay-300">
+                                    <!-- <div class="section-skills img-favoColmeia" id="centralMedio" data-img-favo="favos-centralMedio"></div> -->
+                                    <div class="img-pag-about">
+                                        <!-- <img src="./img/img-MM/vetorizada_MM_A02.png" alt="Imagem Marcia Moreira - sobre"> -->
+                                        <img src="./img/img-MM/SanFrancisco.jpg" alt="Imagem Marcia Moreira - sobre"> 
+                                    </div> <!-- img-pag-about -->
+                                </div> <!-- bloco-central-img -->
+    
+                                <div class="bloco-central-texto">
+                                    <h2>Muito prazer, sou <span>Marcia Moreira.</span></h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sit vitae qui inventore recusandae nam id explicabo similique ipsum ea consequatur, maxime vel autem earum harum distinctio exercitationem ad dolores.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid voluptate error laudantium voluptates maiores officia! Voluptatem sed commodi, veniam porro nihil voluptatum adipisci sit harum soluta, eaque consectetur necessitatibus.</p>
+
+                                    <div class="btn-social">
+                                        <div class='hexagono medio'>
+                                            <div class="hexagono-profundo medio-profundo">
+                                                <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
+                                            </div>
+                                        </div>
+                                        <div class='hexagono medio'>
+                                            <div class="hexagono-profundo medio-profundo">
+                                                <a href="#"><button><i class="bi bi-github"></i></button></a>
+                                            </div>
+                                        </div>
+                                        <div class='hexagono medio'>
+                                            <div class="hexagono-profundo medio-profundo">
+                                                <a href="#"><button><i class="bi bi-whatsapp"></i></button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- bloco-central-texto -->
+
+                            </div> <!-- flex -->
                         </div> <!-- bloco-central -->
                     </div> <!-- flex -->
                 </div> <!-- interface -->
             </section>
+        </div> <!-- bg-colmeia -->
+        <section class="bg-colmeia">
+<!--? INÍCIO BLOCO DE FAVOS DA COLMEIA:  -->
+            <!-- POSIÇÃO: section = menu e id = local onde está o favo -->
+            <div class="reveal-fade delay-300">
+<!--? CANTO INFERIOR DIREITO -->
+            <div class="section-about img-favoColmeia" id="cantoInferiorDireitoAbout" data-img-favo="favos-cantoInferiorDireitoAbout"></div>
+            </div> <!-- position-favos -->
+<!--? FIM BLOCO DE FAVOS DA COLMEIA: -->
+        </section> <!-- background-favos -->
+<!-- PAGINA ESPECIALITIES -->
+        <div class="bg-colmeia" id="especialities">
+            <section class="pag-especialities">
+                <div class="interface">
+                    <div class="flex"> <!--!Verificar se retiro esse flex duplicado!!-->
+                        <div class="bloco-central">
+                            <div class="bloco-central-titulo">
+                                <h1>Minhas <span>experiências.</span></h1>
+                            </div> <!-- bloco-central-titulo -->
+                            <div class="bloco-central-texto">
+                                <p>- Algumas experiências em projetos FreeLancer -</p>
+                            </div> <!-- bloco-central-texto -->
+                            <div class="bloco-central-img reveal-fade delay-300">
+                                <div class="flex">
+                                    <div class="especialities-box">
+                                        <i class="bi bi-code-square"></i>
+                                        <h3>Websites Institucionais</h3>
+                                        <p>Desenvolvo sites que vendem sua marca 24/7. Com navegação intuitiva, SEO amigável e design alinhado à identidade visual, seu projeto vai transmitir profissionalismo desde o primeiro acesso, sem deixar a velocidade de lado!</p>
+                                    </div> <!-- especialities-box -->
+                                    <div class="especialities-box"><i class="bi bi-file-richtext"></i>
+                                        <h3>Portfólios<br>Landing Pages<br>Blogs</h3>
+                                        <p>Seja para artistas ou profissionais criativos, crio sua página para destacar seus trabalhos de forma imersiva. Galerias otimizadas, filtros personalizados e designs minimalistas para que seu trabalho brilhe mais que o layout.</p>
+                                    </div> <!-- especialities-box -->
+                                    <div class="especialities-box">
+                                        <i class="bi bi-cart"></i>
+                                        <h3>Lojas Online</h3>
+                                        <p>Loja online com a sua cara: nada de templates engessados! Desenvolvo e-commerces sob medida, desde a disposição dos produtos até os detalhes do checkout – tudo pensado para refletir sua marca e fidelizar clientes. Porque vender na internet é sobre experiência, não só sobre carrinho de compras.</p>
+                                    </div> <!-- especialities-box -->
+                                </div>
+                            </div> <!-- bloco-central-img -->
+                        </div> <!-- bloco-central -->
+                    </div> <!-- flex -->
+                </div> <!-- interface -->
+            </section> <!-- pag-especialities -->
         </div> <!-- bg-colmeia -->
 <!-- PAGINA SKILLS -->
         <div class="bg-colmeia" id="skills">
