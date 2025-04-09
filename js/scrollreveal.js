@@ -41,6 +41,12 @@ revelar.reveal('.delay-500', { delay: 500 });
 
 revelar.reveal('.delay-600', { delay: 600 });
 
+revelar.reveal('.delay-700', { delay: 700 });
+
+revelar.reveal('.delay-800', { delay: 800 });
+
+revelar.reveal('.delay-900', { delay: 900 });
+
 // Configurações:
 // revelar.reveal('.reveal-fade', {duration: 2000, opacity: 0, reset: true }); // para surgir do próprio lugar
 // revelar.reveal('.reveal', { delay: 200, duration: 1000, origin: 'bottom', distance: '50px' });
