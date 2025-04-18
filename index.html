@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<!--? METADADOS DO PROJETO - INICIO -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +9,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Krona+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <!--? Link dos ícones: -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <!--? Link de Ícons Bootstrap  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!--? Fim Instalação Google Fonts: Obs no CSS OK -->
     <link rel="stylesheet" href="./static/css/style.css">
     <!-- <link rel="stylesheet" href="./static/css/styles-rootColors.css"> -->
     <link rel="stylesheet" href="./static/css/mmweb-logo.css">
-    <!-- <link rel="stylesheet" href="./static/css/styles-favosAleatorios.css"> -->
-    <!-- <link rel="stylesheet" href="./static/css/styles-favosMolduraFoto.css"> -->
-    <!-- <link rel="stylesheet" href="./static/css/styles-favosMolduraProject.css"> -->
-    <!-- <link rel="stylesheet" href="./static/css/styles-responsividadeDeTela.css">     -->
+    <!--? CDN Swiper Carrossel -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./static/css/styles-responsividadeDeTela.css">    
+    <!--? CDN Swiper Carrossel -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!--? Biblioteca de Movimentos na Página: ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- <script>
@@ -27,8 +32,9 @@
     <script src="https://cdn.jsdelivr.net/npm/react@18/dist/react.min.js"></script>
     <title>My Portfolio Marcia Moreira</title>
 </head>
+<!--? METADADOS DO PROJETO - FIM -->
 <body>
-<!-- INÍCIO HEADER -->
+<!--? PAGINA HEADER - INICIO -->
     <header id="start">
         <!-- Bordas Laterais da Página -->
         <div class="interface">
@@ -73,66 +79,65 @@
 
         </div> <!-- interface -->
     </header>
-<!-- FIM HEADER -->
+<!--? PAGINA HEADER - FIM -->
     <main>
-        <!--! retirei o id start -->
-        <div class="bg-colmeia">
-<!-- PAGINA START -->
-        <section class="pag-start">
-            <div class="interface">
-                <div class="flex">
-                    <div class="txt-pag-start">
-                        <h1>Desenvolvedora Web <a href="./skills.html" target="_blank"><span>Full Stack</span></a></h1>
+<!--? PAGINA START - INICIO -->
+        <div class="bg-colmeia"> <!-- mudei o id start para o topo da página -->
+            <section class="pag-start">
+                <div class="interface">
+                    <div class="flex">
+                        <div class="txt-pag-start">
+                            <h1>Desenvolvedora Web <a href="./skills.html" target="_blank"><span>Full Stack</span></a></h1>
 
-                        <P> Cada linha de código que aprendo é como um favo construído com paciência: organizado, eficiente e interligado ao todo. </P>
+                            <P> Cada linha de código que aprendo é como um favo construído com paciência: organizado, eficiente e interligado ao todo. </P>
 
-                        <div class="btns-contato">
-                            <div class="btn-contato">
-                                <a href="./MM_curriculo-042025.html">
-                                    <button> Download CV <i class="bi bi-file-earmark-arrow-down"></i></button>
-                                </a>
-                            </div> <!-- btn-contato -->
-    
-                            <div class="btn-contato">
-                                <a href="https://wa.me/5511977219430" alt="Meu_WhatsApp" target="_blank">
-                                    <button> Entre em contato <i class="bi bi-whatsapp"></i></button>
-                                </a>
-                            </div> <!-- btn-contato -->
-                        </div> <!-- btns-contato -->
-                        
-                    </div> <!-- txt-pag-start -->
-
-                    <div class="moldura-hexagono reveal-bottom delay-200">
-                        <div class="moldura-hexagono-profundo">
-                            <div class="img-pag-start reveal-bottom delay-100">
-                                <!-- <img src="./img/img-MM/Marcia_Moreira_vet.png" alt="Imagem Marcia Moreira"> -->
-                                <img src="./img/img-MM/vetorizada_MM_A01.png" alt="Imagem Marcia Moreira">
+                            <div class="btns-contato">
+                                <div class="btn-contato">
+                                    <a href="./MM_curriculo-042025.html">
+                                        <button> Download CV <i class="bi bi-file-earmark-arrow-down"></i></button>
+                                    </a>
+                                </div> <!-- btn-contato -->
+        
+                                <div class="btn-contato">
+                                    <a href="https://wa.me/5511977219430" alt="Meu_WhatsApp" target="_blank">
+                                        <button> Entre em contato <i class="bi bi-whatsapp"></i></button>
+                                    </a>
+                                </div> <!-- btn-contato -->
+                            </div> <!-- btns-contato -->
+                            
+                        </div> <!-- txt-pag-start -->
+                        <!-- FOTO de Capa dentro do Exagono -->
+                        <div class="moldura-hexagono reveal-bottom delay-200">
+                            <div class="moldura-hexagono-profundo">
+                                <div class="img-pag-start reveal-bottom delay-100">
+                                    <!-- <img src="./img/img-MM/Marcia_Moreira_vet.png" alt="Imagem Marcia Moreira"> -->
+                                    <img src="./img/img-MM/vetorizada_MM_A01.png" alt="Imagem Marcia Moreira">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                </div> <!-- flex -->
-            </div> <!-- interface -->
-        </section> <!-- pag-start -->
-
+                        
+                    </div> <!-- flex -->
+                </div> <!-- interface -->
+            </section> <!-- pag-start -->
+<!--? PAGINA START - FIM -->
+<!--* BLOCO DE FAVOS BACKGROUND DENTRO PAGINA START -->
         <section class="background-favos">
-<!--? INÍCIO BLOCO DE FAVOS DA COLMEIA:  -->
+<!--* INÍCIO BLOCO DE FAVOS DA COLMEIA:  -->
             <!-- POSIÇÃO: section = menu e id = local onde está o favo -->
             <div class="position-favos reveal-fade delay-300">
-<!--? CANTO INFERIOR ESQUERDO -->
+<!--* CANTO INFERIOR ESQUERDO -->
                 <div class="section-start img-favoColmeia" id="cantoInferiorEsquerdo" data-img-favo="favos-cantoInferiorEsquerdo"></div>
-<!--? BLOCO DE MENSAGEM -->
+<!--* BLOCO DE MENSAGEM -->
                 <div class="section-start bloco-mensagens">
                     <p>"Cada linha de código que aprendo é como um favo <br> construído com paciência: <br> organizado, eficiente e interligado ao todo."<br> -MMWeb-</p>
                 </div>
-<!--? CANTO INFERIOR DIREITO -->
+<!--* CANTO INFERIOR DIREITO -->
                 <div class="section-start img-favoColmeia" id="cantoInferiorDireito" data-img-favo="favos-cantoInferiorDireito"></div>
             </div> <!-- position-favos -->
-<!--? FIM BLOCO DE FAVOS DA COLMEIA: -->
+<!--* FIM BLOCO DE FAVOS DA COLMEIA: -->
         </section> <!-- background-favos -->
-
         </div> <!-- bg-colmeia -->
-<!-- PAGINA ABOUT -->
+<!--? PAGINA ABOUT - INICIO -->
         <div class="bg-colmeia" id="about">
             <section class="pag-about">
                 <div class="interface">
@@ -174,58 +179,59 @@
                                         </div>
                                     </div>
                                 </div> <!-- bloco-central-texto -->
-
                             </div> <!-- flex -->
+
                         </div> <!-- bloco-central -->
                     </div> <!-- flex -->
                 </div> <!-- interface -->
             </section>
+<!--* BLOCO DE FAVOS BACKGROUND DENTRO PAGINA ABOUT -->
+            <section class="bg-colmeia">
+    <!--? INÍCIO BLOCO DE FAVOS DA COLMEIA:  -->
+                <!-- POSIÇÃO: section = menu e id = local onde está o favo -->
+                <div class="reveal-fade delay-300">
+    <!--? CANTO INFERIOR DIREITO -->
+                <div class="section-about img-favoColmeia" id="cantoInferiorDireitoAbout" data-img-favo="favos-cantoInferiorDireitoAbout"></div>
+                </div> <!-- position-favos -->
+    <!--? FIM BLOCO DE FAVOS DA COLMEIA: -->
+            </section> <!-- background-favos -->
         </div> <!-- bg-colmeia -->
-        <section class="bg-colmeia">
-<!--? INÍCIO BLOCO DE FAVOS DA COLMEIA:  -->
-            <!-- POSIÇÃO: section = menu e id = local onde está o favo -->
-            <div class="reveal-fade delay-300">
-<!--? CANTO INFERIOR DIREITO -->
-            <div class="section-about img-favoColmeia" id="cantoInferiorDireitoAbout" data-img-favo="favos-cantoInferiorDireitoAbout"></div>
-            </div> <!-- position-favos -->
-<!--? FIM BLOCO DE FAVOS DA COLMEIA: -->
-        </section> <!-- background-favos -->
-<!-- PAGINA ESPECIALITIES -->
+<!--? PAGINA ABOUT - FIM -->
+<!--? PAGINA ESPECIALITIES INICIO -->
         <div class="bg-colmeia" id="especialities">
             <section class="pag-especialities">
                 <div class="interface">
-                    <div class="flex"> <!--!Verificar se retiro esse flex duplicado!!-->
-                        <div class="bloco-central">
-                            <div class="bloco-central-titulo">
-                                <h1>Minhas <span>experiências.</span></h1>
-                            </div> <!-- bloco-central-titulo -->
-                            <div class="bloco-central-texto">
-                                <p>- Algumas experiências em projetos FreeLancer -</p>
-                            </div> <!-- bloco-central-texto -->
-                            <div class="bloco-central-img reveal-fade delay-300">
-                                <div class="flex">
-                                    <div class="especialities-box">
-                                        <i class="bi bi-code-square"></i>
-                                        <h3>Websites Institucionais</h3>
-                                        <p>Desenvolvo sites que vendem sua marca 24/7. Com navegação intuitiva, SEO amigável e design alinhado à identidade visual, seu projeto vai transmitir profissionalismo desde o primeiro acesso, sem deixar a velocidade de lado!</p>
-                                    </div> <!-- especialities-box -->
-                                    <div class="especialities-box"><i class="bi bi-file-richtext"></i>
-                                        <h3>Portfólios<br>Landing Pages<br>Blogs</h3>
-                                        <p>Seja para artistas ou profissionais criativos, crio sua página para destacar seus trabalhos de forma imersiva. Galerias otimizadas, filtros personalizados e designs minimalistas para que seu trabalho brilhe mais que o layout.</p>
-                                    </div> <!-- especialities-box -->
-                                    <div class="especialities-box">
-                                        <i class="bi bi-cart"></i>
-                                        <h3>Lojas Online</h3>
-                                        <p>Loja online com a sua cara: nada de templates engessados! Desenvolvo e-commerces sob medida, desde a disposição dos produtos até os detalhes do checkout – tudo pensado para refletir sua marca e fidelizar clientes. Porque vender na internet é sobre experiência, não só sobre carrinho de compras.</p>
-                                    </div> <!-- especialities-box -->
-                                </div>
-                            </div> <!-- bloco-central-img -->
-                        </div> <!-- bloco-central -->
-                    </div> <!-- flex -->
+                    <div class="bloco-central">
+                        <div class="bloco-central-titulo">
+                            <h1>Minhas <span>experiências.</span></h1>
+                        </div> <!-- bloco-central-titulo -->
+                        <div class="bloco-central-texto">
+                            <p>- Algumas experiências em projetos FreeLancer -</p>
+                        </div> <!-- bloco-central-texto -->
+                        <div class="bloco-central-img reveal-fade delay-300">
+                            <div class="flex">
+                                <div class="especialities-box">
+                                    <i class="bi bi-code-square"></i>
+                                    <h3>Websites Institucionais</h3>
+                                    <p>Desenvolvo sites que vendem sua marca 24/7. Com navegação intuitiva, SEO amigável e design alinhado à identidade visual, seu projeto vai transmitir profissionalismo desde o primeiro acesso, sem deixar a velocidade de lado!</p>
+                                </div> <!-- especialities-box -->
+                                <div class="especialities-box"><i class="bi bi-file-richtext"></i>
+                                    <h3>Portfólios<br>Landing Pages<br>Blogs</h3>
+                                    <p>Seja para artistas ou profissionais criativos, crio sua página para destacar seus trabalhos de forma imersiva. Galerias otimizadas, filtros personalizados e designs minimalistas para que seu trabalho brilhe mais que o layout.</p>
+                                </div> <!-- especialities-box -->
+                                <div class="especialities-box">
+                                    <i class="bi bi-cart"></i>
+                                    <h3>Lojas Online</h3>
+                                    <p>Loja online com a sua cara: nada de templates engessados! Desenvolvo e-commerces sob medida, desde a disposição dos produtos até os detalhes do checkout – tudo pensado para refletir sua marca e fidelizar clientes. Porque vender na internet é sobre experiência, não só sobre carrinho de compras.</p>
+                                </div> <!-- especialities-box -->
+                            </div>
+                        </div> <!-- bloco-central-img -->
+                    </div> <!-- bloco-central -->
                 </div> <!-- interface -->
             </section> <!-- pag-especialities -->
         </div> <!-- bg-colmeia -->
-<!-- PAGINA SKILLS -->
+<!--? PAGINA ESPECIALITIES - FIM -->
+<!--? PAGINA SKILLS - INICIO -->
         <div class="bg-colmeia" id="skills">
             <section class="pag-skills">
                 <div class="interface">
@@ -248,7 +254,220 @@
                 </div> <!-- interface -->
             </section> <!-- section skills-->
         </div> <!-- bg-colmeia -->
-<!-- PAGINA PROJECTS -->
+<!--? PAGINA SKILLS - FIM -->
+<!--? PAGINA INSTITUTIONS CARROSSEL - INICIO -->
+        <div class="#" id="institutions"> <!-- Tive que retirar a classe bg-colmeia -->
+            <section class="pag-institutions">
+                <div class="interface">
+                    <!-- Criar um carrossel de Badges Institucionais -->
+                    <div class="badges-institutions">
+                        <div class="txt-badge reveal-top delay-500">
+                            <h3> Instituições que contribuiram para o meu desenvolvimento! </h3>
+                        </div> <!-- txt-badge -->
+                        
+                        <div class="flex">
+                            <div class="swiper-container">
+                                <!-- reveal-fade delay-300 -->
+                                <div class="swiper-wrapper img-badge-carrossel">
+                                    <!--? INÍCIO PRIMEIRA FAIXA DE BADGES: -->
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_01-42sp" data-tooltip="Formação na 42SP (2023)">
+                                            <!--* ![42](https://img.shields.io/badge/-42-black?style=for-the-badge&logo=42&logoColor=white) -->
+                                            <img src="https://img.shields.io/badge/-42-black?style=for-the-badge&logo=42&logoColor=white" alt="42sp" title="Escola de programação 42 São Paulo/Imersão Pisciner na 42SP (2024)">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_02-Coursera" data-tooltip="Formação na 42SP (2023)">
+                                            <img src="https://img.shields.io/badge/Coursera-%230056D2.svg?style=for-the-badge&logo=Coursera&logoColor=white" alt="Coursera" title="Coursera">
+                                        </div>
+                                    </div>                                   
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_03-Duolingo" data-tooltip="Formação na 42SP (2023)">
+                                            <img src="https://img.shields.io/badge/Duolingo-%234DC730.svg?style=for-the-badge&logo=Duolingo&logoColor=white" alt="Duolingo">
+                                        </div>
+                                    </div>                                   
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_04-FreeCodeCamp">
+                                            <img src="https://img.shields.io/badge/Freecodecamp-%23123.svg?&style=for-the-badge&logo=freecodecamp&logoColor=green" alt="FreeCodeCamp">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_05-Microsoft Learn">
+                                            <img src="https://img.shields.io/badge/Microsoft_Learn-258ffa?style=for-the-badge&logo=microsoft&logoColor=white" alt="Microsoft Learn">
+                                        </div>
+                                    </div>                                    
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_06-Udacity">
+                                            <img src="https://img.shields.io/badge/Udacity-grey?style=for-the-badge&logo=udacity&logoColor=15B8E6" alt="Udacity">
+                                        </div>
+                                    </div>                                    
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_07-Udemy">
+                                            <img src="https://img.shields.io/badge/Udemy-A435F0?style=for-the-badge&logo=Udemy&logoColor=white" alt="Udemy">
+                                        </div>
+                                    </div>                                    
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_08-Cisco">
+                                            <img src="https://img.shields.io/badge/cisco-%23049fd9.svg?style=for-the-badge&logo=cisco&logoColor=black" alt="Cisco">
+                                        </div>
+                                    </div>                                    
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_09-Meta">
+                                            <img src="https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white" alt="Meta">
+                                        </div>
+                                    </div>                                    
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_10-Raspberry Pi">
+                                            <img src="https://img.shields.io/badge/-Raspberry_Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi" alt="Raspberry Pi">
+                                        </div>
+                                    </div>                                    
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_11-Meetup">
+                                            <img src="https://img.shields.io/badge/Meetup-f64363?style=for-the-badge&logo=meetup&logoColor=white" alt="Meetup">
+                                        </div>
+                                    </div>
+                                    <!--? FIM PRIMEIRA FAIXA DE BADGES -->
+                                    <!--? INÍCIO SEGUNDA FAIXA DE BADGES: -->
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_01-42sp">
+                                            <!--* ![42](https://img.shields.io/badge/-42-black?style=for-the-badge&logo=42&logoColor=white) -->
+                                            <img src="https://img.shields.io/badge/-42-black?style=for-the-badge&logo=42&logoColor=white" alt="42sp">
+                                        </div>
+                                    </div>                                  
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_02-Coursera">
+                                            <img src="https://img.shields.io/badge/Coursera-%230056D2.svg?style=for-the-badge&logo=Coursera&logoColor=white" alt="Coursera">
+                                        </div>
+                                    </div>                                   
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_03-Duolingo">
+                                            <img src="https://img.shields.io/badge/Duolingo-%234DC730.svg?style=for-the-badge&logo=Duolingo&logoColor=white" alt="Duolingo">
+                                        </div>
+                                    </div>                                   
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_04-FreeCodeCamp">
+                                            <img src="https://img.shields.io/badge/Freecodecamp-%23123.svg?&style=for-the-badge&logo=freecodecamp&logoColor=green" alt="FreeCodeCamp">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_05-Microsoft Learn">
+                                            <img src="https://img.shields.io/badge/Microsoft_Learn-258ffa?style=for-the-badge&logo=microsoft&logoColor=white" alt="Microsoft Learn">
+                                        </div>
+                                    </div>                                    
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_06-Udacity">
+                                            <img src="https://img.shields.io/badge/Udacity-grey?style=for-the-badge&logo=udacity&logoColor=15B8E6" alt="Udacity">
+                                        </div>
+                                    </div>                                    
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_07-Udemy">
+                                            <img src="https://img.shields.io/badge/Udemy-A435F0?style=for-the-badge&logo=Udemy&logoColor=white" alt="Udemy">
+                                        </div>
+                                    </div>                                    
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_08-Cisco">
+                                            <img src="https://img.shields.io/badge/cisco-%23049fd9.svg?style=for-the-badge&logo=cisco&logoColor=black" alt="Cisco">
+                                        </div>
+                                    </div>                                    
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_09-Meta">
+                                            <img src="https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white" alt="Meta">
+                                        </div>
+                                    </div>                                    
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_10-Raspberry Pi">
+                                            <img src="https://img.shields.io/badge/-Raspberry_Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi" alt="Raspberry Pi">
+                                        </div>
+                                    </div>                                    
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_11-Meetup">
+                                            <img src="https://img.shields.io/badge/Meetup-f64363?style=for-the-badge&logo=meetup&logoColor=white" alt="Meetup">
+                                        </div>
+                                    </div>
+                                    <!--? FIM SEGUNDA FAIXA DE BADGES -->
+                                    <!--? INÍCIO DO ÚLTIMO BLOCO DE BADGES: -->
+                                    <!--! Teste -->
+                                    <!-- <div class="swiper-slide">
+                                        <div class="badge-item badge_14-xpto">
+                                            <img src="./img/img-logos-badges/anhembi_morumbi-01.png" alt="">
+                                        </div>
+                                    </div> -->
+                                    <!--! TESTE -->
+                                    <!-- <div class="swiper-slide">
+                                        <div class="badge-item badge_12-xpto">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_13-xpto">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_14-xpto">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_15-xpto">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_16-xpto">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_17-xpto">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_18-xpto">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_19-xpto">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_20-xpto">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_21-xpto">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_22-xpto">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_23-xpto">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="badge-item badge_24-xpto">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div> -->
+                                <!--? FIM DO ÚLTIMO BLOCO DE BADGES -->
+                                </div> <!-- img-badge-carrossel -->
+                            </div> <!-- swiper-container --> 
+                        </div> <!-- flex -->
+                    </div> <!-- badges-institucinal -->
+                </div> <!-- interface -->
+            </section> <!-- -->
+        </div> <!-- sem classe -->
+<!--? PAGINA INSTITUTIONS CARROSSEL - FIM -->
+<!--? PAGINA PROJECTS - INICIO -->
         <div class="bg-colmeia" id="projects">
             <section class="pag-projects">
                 <div class="interface">
@@ -509,7 +728,8 @@
                 </div> <!-- interface -->
             </section> <!-- section projects-->
         </div> <!-- bg-colmeia -->
-<!-- PAGINA PORTFOLIO -->
+<!--? PAGINA PROJECTS - FIM -->
+<!--? PAGINA PORTFOLIO - INICIO -->
         <div class="bg-colmeia" id="portfolio">
             <section class="pag-portfolio">
                 <div class="interface">
@@ -534,8 +754,9 @@
                     </div>
                 </div>
             </section>
-        </div>
-<!-- PAGINA CONTACTS -->
+        </div> <!-- bg-colmeia -->
+<!--? PAGINA PORTFOLIO - FIM -->
+<!--? PAGINA CONTACTS - INICIO -->
         <div class="bg-colmeia" id="contacts">
             <section class="pag-contacts">
                 <div class="interface">
@@ -548,12 +769,63 @@
                 </div> <!-- interface -->
             </section> <!--section Colmeia-->
         </div> <!-- bg-colmeia -->
-<!-- FIM PAGINAS -->
+<!--? PAGINA CONTACTS - FIM -->
+<!--? FOOTER - INICIO -->
         <Footer>
-            <!-- FOOTER -->
-        </Footer>
+            <div class="interface">
+                <div class="line-footer">
+                    <div class="flex">
+                        <div class="logo-footer">
+                            <div class="logo">
+                                <a href="https://wa.me/5511977219430" alt="Meu_WhatsApp" target="_blank">
+                                    <!-- <img src="./img/img-MM/favicon.ico" alt="Logo-MM"> -->
+                                    <!-- Logo com escala padrão (1.0) (ex: 0.6, 1.0, 1.5, 2.0) -->
+                                    <div class="logo-container-mmweb" style="--logo-scale: 0.4;">
+                                        <div class="logo-moldura-borda-preta">
+                                            <div class="logo-moldura-hexagono">
+                                                <div class="logo-moldura-hexagono-profundo">
+                                                    <div class="logo-mmweb">
+                                                        <div class="top">M</div>
+                                                        <div class="eb">eb</div>
+                                                        <div class="base">MM</div>
+                                                    </div> <!-- logo-mmweb -->
+                                                </div> <!-- moldura-hexagono-profundo -->
+                                            </div> <!-- moldura-hexagono -->
+                                        </div> <!-- moldura-borda-preta -->
+                                    </div> <!-- logo-container-mmweb -->
+                                </a> <!-- logo-mmweb -->
+                            </div> <!-- logo -->
+                        </div>
+                        <!-- <div class="flex"></div> -->
+                        <div class="btn-social">
+                            <div class='hexagono medio'>
+                                <div class="hexagono-profundo medio-profundo">
+                                    <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
+                                </div>
+                            </div>
+                            <div class='hexagono medio'>
+                                <div class="hexagono-profundo medio-profundo">
+                                    <a href="#"><button><i class="bi bi-github"></i></button></a>
+                                </div>
+                            </div>
+                            <div class='hexagono medio'>
+                                <div class="hexagono-profundo medio-profundo">
+                                    <a href="#"><button><i class="bi bi-whatsapp"></i></button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="line-footer borda-superior">
+                    <!-- Sem o "class="bi bi-envelope-fill" -->
+                    <p><i class="bi bi-envelope"> <a href="mailto:id.marcia.moreira@gmail.com"> id.marcia.moreira@gmail.com</a></i></p>
+                </div>
+            </div>
+        </Footer> <!-- footer -->
+<!--? FOOTER - FIM -->
     </main>
-    <!--? Link de Ícons Bootstrap  -->
+<!--? Link de Ícons Bootstrap  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
     <script src="./js/colmeias-carregarFavosComponentes.js"></script>
     <!-- Usar DEFER para esperar a página carregar por completo -->
@@ -561,6 +833,7 @@
     <script src="./js/animarFavosEmPares.js"></script>
     <script src="./js/aparicaoAleatoriaColmeia.js"></script>
     <script src="./js/area-de-click-tooltip.js"></script>
+    <script src="./js/swiper-slider-carrossel.js"></script>
     <!-- <script src="./js/scrollreveal.js"></script> -->
 </body>
 </html>
